@@ -6,12 +6,12 @@
     <div class="mdl-layout-spacer"></div>
     <!-- Navigation -->
     <?php
-    if ( has_nav_menu( 'primary_navigation' ) ) :
+    if ( has_nav_menu( 'header_navigation' ) ) :
 
       // Remove wrapping <li> from around links
       // https://css-tricks.com/snippets/wordpress/remove-li-elements-from-output-of-wp_nav_menu/#comment-542093
       $cleanermenu = wp_nav_menu( array(
-        'theme_location' => 'primary_navigation',
+        'theme_location' => 'header_navigation',
         'container' => false,
         'items_wrap' => '<nav class="mdl-navigation">%3$s</nav>',
         'echo' => false,
@@ -38,7 +38,7 @@
       'container' => false,
       'items_wrap' => '<nav class="mdl-navigation">%3$s</nav>',
       'echo' => false,
-      'depth' => 1,
+      'depth' => 2,
     ) );
     $find = array('><a','li');
     $replace = array('','a');
@@ -46,5 +46,16 @@
 
   endif;
   ?>
-
+ <!-- start search form -->
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+    <label class="mdl-button mdl-js-button mdl-button--icon" for="search-expandable">
+      <i class="material-icons">search</i>
+    </label>
+    <div class="mdl-textfield__expandable-holder">
+      <input class="mdl-textfield__input" type="text" id="search-expandable" />
+      <label class="mdl-textfield__label" for="search-expandable">Search text</label>
+    </div>
+  </div>
+  <!-- end search form -->
 </div>
+

@@ -3,16 +3,8 @@
 namespace Roots\Sage\Assets;
 
 /**
- * Scripts and stylesheets
- *
- * Enqueue stylesheets in the following order:
- * 1. /theme/dist/styles/main.css
- *
- * Enqueue scripts in the following order:
- * 1. /theme/dist/scripts/modernizr.js
- * 2. /theme/dist/scripts/main.js
+ * Get paths for assets
  */
-
 class JsonManifest {
   private $manifest;
 
@@ -48,13 +40,13 @@ class JsonManifest {
 }
 
 function asset_path($filename) {
-  $dist_path = get_template_directory_uri() . DIST_DIR;
+  $dist_path = get_template_directory_uri() . '/dist/';
   $directory = dirname($filename) . '/';
   $file = basename($filename);
   static $manifest;
 
   if (empty($manifest)) {
-    $manifest_path = get_template_directory() . DIST_DIR . 'assets.json';
+    $manifest_path = get_template_directory() . '/dist/' . 'assets.json';
     $manifest = new JsonManifest($manifest_path);
   }
 
@@ -77,3 +69,4 @@ function assets() {
   wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+

@@ -23,7 +23,6 @@
 
     endif;
     ?>
-
   </div>
 </header>
 <div class="mdl-layout__drawer">

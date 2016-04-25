@@ -1,0 +1,15 @@
+// Search form
+.search-form {
+  @extend .mdl-textfield;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .mdl-textfield__label;
+}
+.search-form .search-field {
+  @extend .mdl-textfield__input;
+}
+.search-form .search-submit {
+  @extend .mdl-button;
+  //@extend .mdl-js-button .mdl-button--raised .mdl-js-ripple-effect;
+}

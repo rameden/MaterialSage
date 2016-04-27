@@ -11,7 +11,6 @@ var imagemin     = require('gulp-imagemin');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
 var less         = require('gulp-less');
-var loadplugins  = require('gulp-load-plugins')();
 var merge        = require('merge-stream');
 var cssNano      = require('gulp-cssnano');
 var plumber      = require('gulp-plumber');
@@ -68,19 +67,6 @@ var enabled = {
 // Path to the compiled assets manifest in the dist directory
 var revManifest = path.dist + 'assets.json';
 
-// Lifted from MDL's gulpfile
-var AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
-  'ios >= 7',
-  'android >= 4.4',
-  'bb >= 10'
-];
-
 // ## Reusable Pipelines
 // See https://github.com/OverZealous/lazypipe
 
@@ -116,7 +102,7 @@ var cssTasks = function(filename) {
         'last 2 versions',
         'android 4',
         'opera 12'
-      ] // AUTOPREFIXER_BROWSERS
+      ]
     })
     .pipe(cssNano, {
       safe: true
@@ -299,24 +285,4 @@ gulp.task('wiredep', function() {
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
-});
-
-// ### Zip
-// `gulp zip` - Zip up a distribution of the compiled WordPress theme.
-// Run after doing a build.
-gulp.task('zip', function(callback) {
-  return gulp.src([
-    'dist/**/*',
-    'lang/*',
-    'lib/*',
-    'templates/*',
-    '*.css',
-    '*.md',
-    '*.php',
-    '*.txt'
-  ], {
-    base: '.'
-  })
-    .pipe(loadplugins.zip('sage-mdl.zip'))
-    .pipe(gulp.dest('release'));
 });

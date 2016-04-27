@@ -1,4 +1,4 @@
-<header class="mdl-layout__header">
+<header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--grey-100">
   <div class="mdl-layout__header-row">
     <!-- Title -->
     <a class="mdl-layout-title" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>

@@ -31,3 +31,17 @@ function excerpt_more() {
   return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'immaterial') . '</a>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
+
+
+/* As recommended in Roots Discourse, this function is called
+ * within div wrap so we can eliminate the container and have
+ * full width rows and divs.
+*/
+function container_class() {
+  if ( is_front_page() || 'movies' == get_post_type() ) {
+    return 'mdl-grid--no-spacing';
+  } else {
+    return;
+  }
+}
+//*

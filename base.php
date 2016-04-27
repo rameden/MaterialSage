@@ -2,6 +2,7 @@
 
 use Roots\Sage\Setup;
 use Roots\Sage\Wrapper;
+use Roots\Sage\Extras;
 
 ?>
 
@@ -21,7 +22,7 @@ use Roots\Sage\Wrapper;
           get_template_part('templates/header');
         ?>
         <div class="mdl-layout__content" role="document">
-          <div class="mdl-grid">
+          <div class="mdl-grid <?= Extras\container_class(); ?>">
             <?php
             if (Setup\display_sidebar()) :
               $col = 'mdl-cell--8-col';

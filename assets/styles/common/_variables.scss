@@ -10,7 +10,7 @@ $trim-color-classes: false !default;
 // your brand and provide good contrast between visual components.
 $color-primary: $palette-grey-500 !default;
 $color-primary-dark: $palette-grey-700 !default;
-$color-accent: $palette-indigo-700 !default;
+$color-accent: $palette-blue-700 !default;
 
 
 // Our primary is dark, so use $color-dark-contrast for overlaid text.
@@ -18,5 +18,6 @@ $color-primary-contrast: $palette-yellow-500 !default;
 // Our accent is dark, so use $color-dark-contrast for overlaid text.
 $color-accent-contrast: $palette-yellow-500 !default;
 
-
+$preferred_font: 'Helvetica', 'Arial', sans-serif !default;
+$performance_font: 'Helvetica', 'Arial', sans-serif !default;
 

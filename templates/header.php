@@ -1,5 +1,5 @@
 <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
-  <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-500">
+  <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">
     <div class="mdl-layout-spacer"></div>
       <svg fill="#7f7d7b" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 0h24v24H0z" fill="none"/>
@@ -39,7 +39,7 @@
 
 
 </header>
-<div class="mdl-layout__drawer">
+<div class="mdl-layout__drawer mdl-color-text--grey-800 mdl-color--yellow-500">
   <a class="mdl-layout-title" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 
   <?php

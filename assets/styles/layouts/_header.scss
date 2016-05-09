@@ -54,7 +54,7 @@
   min-height: 5rem;
 }
 
-.mdl-navigation {
+.mdl-layout--large-screen-only {
   display: none;
 }
 
@@ -99,7 +99,7 @@
     height: 1.5rem;
   }
 
-  .mdl-navigation {
+  .mdl-layout--large-screen-only {
     display: block;
   }
 

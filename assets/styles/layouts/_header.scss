@@ -1,9 +1,10 @@
 .mdl-layout-title {
     color: inherit;
-    font-size: 1.3em;
-    letter-spacing: -0.001em;
+    font-size: 1.3rem;
+    letter-spacing: -0.001rem;
     text-decoration: none;
-    word-spacing: -0.1em;
+    word-spacing: -0.1rem;
+    margin-top: 0.6rem;
 }
 
 .menu-item {
@@ -11,45 +12,96 @@
 }
 
 .mdl-layout__header-row {
-    height: 56px;
+    height: 30px;
     padding: 0 12px 0 52px;
 }
 
 .mdl-layout__drawer .mdl-layout-title {
     color: inherit;
     font-size: 1em;
-    letter-spacing: -0.001em;
+    letter-spacing: -0.001rem;
     text-decoration: none;
-    word-spacing: -0.1em;
+    word-spacing: -0.1rem;
 }
-//480, 600, 840, 960, 1280, 1440, and 1600dp.
 
-@media (min-width: 600px) {
+.mdl-layout-subtitle {
+  color: inherit;
+  text-decoration: none;
+  font-size: .78rem;
+}
+
+.mdl-layout__header-row-thin {
+  height: 2rem;
+}
+
+.mdl-layout__header-row-sliver {
+  height: .8rem;
+  padding: .6rem;
+  margin: 0;
+}
+
+.mdl-layout__header-row-sliver span {
+  font-size: .9em;
+}
+
+.mdl-layout__drawer-button {
+    margin-top: 1.2rem !important;
+}
+
+.mdl-layout__header {
+  min-height: 6rem;
+}
+
+//Breakpoints 480, 600, 840, 960, 1280, 1440, and 1600dp.
+
+@media (min-width: 37rem) {
   .mdl-layout-title {
       color: inherit;
-      font-size: 1.5em;
-      letter-spacing: .4em;
+      font-size: 1.5rem;
+      letter-spacing: .4rem;
       text-decoration: none;
-      word-spacing: .1em;
+      word-spacing: .1rem;
   }
 
   .mdl-layout__header-row {
-    height: 56px;
+    //height: 56px;
     padding: 0 12px 0 62px;
   }
+
+  .mdl-layout-subtitle {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: .25rem;
+    font-size: .9rem;
+  }
+
+  .mdl-layout__header-row-thin {
+    height: 1.5rem;
+  }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 60rem) {
   .mdl-layout-title {
       color: inherit;
-      font-size: 1.5em;
-      letter-spacing: .8em;
+      font-size: 1.5rem;
+      letter-spacing: .5rem;
       text-decoration: none;
-      word-spacing: .8em;
+      word-spacing: .3rem;
+      line-height: 2rem;
   }
 
   .mdl-layout__header-row {
-    height: 56px;
-    padding: 0 12px 0 72px;
+    padding: 0 12px 0 92px;
+  }
+
+  .mdl-layout-subtitle {
+    color: inherit;
+    text-decoration: none;
+    letter-spacing: .27rem;
+    font-size: .96rem;
+  }
+
+  .mdl-layout__header-row-thin {
+    height: 1.5rem;
   }
 }

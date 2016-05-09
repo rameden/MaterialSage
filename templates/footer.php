@@ -17,6 +17,7 @@
     P: <span property="telephone">(850) 932-8560</span> F: <span property="fax">(850) 932-8129</span>
     <a href="mailto:jack@delapiedralawfirm.com" property="email">jack@delapiedralawfirm.com</a>
   </div>
+    <a href="attorney-advertising-legal-notice">Attorney Advertising & Legal Notice</a>
 </footer>
 <?php } ?>
 

@@ -1,3 +1,5 @@
+@import "../../bower_components/material-design-lite/src/color-definitions";
+
 .mdl-layout-title {
     color: inherit;
     font-size: 1.3rem;
@@ -45,11 +47,29 @@
 }
 
 .mdl-layout__drawer-button {
-    margin-top: 1.2rem !important;
+    margin-top: $height-of-sliver-row !important;
 }
 
 .mdl-layout__header {
-  min-height: 6rem;
+  min-height: 5rem;
+}
+
+.mdl-navigation {
+  display: none;
+}
+
+.mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header-row .menu-item {
+    border: 1px solid $palette-blue-700;
+    color: $palette-blue-700;
+    display: block;
+    line-height: 1.4rem;
+    margin-top: $height-of-sliver-row * 2;
+    padding: 0 1rem;
+}
+
+.mdl-layout__header-row .menu-item:hover {
+    background-color: black;
+    color: white
 }
 
 //Breakpoints 480, 600, 840, 960, 1280, 1440, and 1600dp.
@@ -78,6 +98,15 @@
   .mdl-layout__header-row-thin {
     height: 1.5rem;
   }
+
+  .mdl-navigation {
+    display: block;
+  }
+
+  .mdl-layout__header-row-sliver {
+    height: 1.2rem;
+    margin: 0;
+  }
 }
 
 @media (min-width: 60rem) {
@@ -103,5 +132,9 @@
 
   .mdl-layout__header-row-thin {
     height: 1.5rem;
+  }
+
+  .mdl-navigation {
+    display: block;
   }
 }

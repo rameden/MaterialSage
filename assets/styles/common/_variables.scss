@@ -3,6 +3,8 @@
 //@import "functions";
 @import "custom-colors";
 
+$height-of-sliver-row: 1.2rem;
+
 $trim-color-classes: false !default;
 
 
@@ -18,6 +20,6 @@ $color-primary-contrast: $palette-yellow-500 !default;
 // Our accent is dark, so use $color-dark-contrast for overlaid text.
 $color-accent-contrast: $palette-yellow-500 !default;
 
-$preferred_font: 'Helvetica', 'Arial', sans-serif !default;
+$preferred_font: 'Helvetica Neue', 'Arial', sans-serif !default;
 $performance_font: 'Helvetica', 'Arial', sans-serif !default;
 

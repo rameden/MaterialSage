@@ -1,28 +1,13 @@
  <script>
     //https://github.com/iamdustan/smoothscroll
-    /*var T = 2000;
   document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
-    console.log('scrollTo 0, 300');
-    window.scrollTo({left: 0, top: 300, behavior: 'smooth'});
-    setTimeout(function() {
-      console.log('scrollTo 0, 600');
-      window.scrollTo({left: 0, top: 1200, behavior: 'smooth'});
-    }, 150);
-    setTimeout(function() {
-    console.log('#scrollIntoView toTop');
-    document.getElementById('scrollIntoView')
-      .scrollIntoView({top: true, behavior: 'smooth'});
-       }, T); }, T); }
-  , false);*/
-  document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
-      document.getElementById("buildcase").addEventListener("click", myFunction);
+      document.getElementById("buildcase").addEventListener("click", pageScrolling);
       }, 2000)
     }, false);
-    function myFunction() {
-    console.log('#scrollIntoView toTop');
-    document.getElementById('scrollIntoView')
-      .scrollIntoView({top: true, behavior: 'smooth'});
-       }
+
+    function pageScrolling() {
+      document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
+    }
   </script>
   <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
   <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">

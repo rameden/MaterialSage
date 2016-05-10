@@ -32,6 +32,15 @@
         </div>
       </div>
     </div>
+    <div class="content-grid mdl-grid mdl-grid--no-spacing" style="height:300px">
+      <div style="text-align:center" class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--teal-400">
+        <h2>Let’s Build <br />
+        Your Case<br />
+        Together</h2>
+        <i class="material-icons" id="buildcase" style="font-size:36px">file_download</i>
+      </div>
+  </div>
+
   <a name="how"></a>
 	<div class="content-grid mdl-grid" style="height:300px">
       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-color--yellow-500">

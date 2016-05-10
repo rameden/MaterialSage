@@ -1,5 +1,6 @@
  <script>
-    var T = 2000;
+    //https://github.com/iamdustan/smoothscroll
+    /*var T = 2000;
   document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
     console.log('scrollTo 0, 300');
     window.scrollTo({left: 0, top: 300, behavior: 'smooth'});
@@ -12,7 +13,16 @@
     document.getElementById('scrollIntoView')
       .scrollIntoView({top: true, behavior: 'smooth'});
        }, T); }, T); }
-  , false);
+  , false);*/
+  document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
+      document.getElementById("buildcase").addEventListener("click", myFunction);
+      }, 2000)
+    }, false);
+    function myFunction() {
+    console.log('#scrollIntoView toTop');
+    document.getElementById('scrollIntoView')
+      .scrollIntoView({top: true, behavior: 'smooth'});
+       }
   </script>
   <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
   <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">

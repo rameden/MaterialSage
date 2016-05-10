@@ -10,17 +10,8 @@
     setTimeout(function() {
     console.log('#scrollIntoView toTop');
     document.getElementById('scrollIntoView')
-      .scrollIntoView({top: true, behavior: 'smooth'});          setTimeout(function() {
-    console.log('scrollTo 0, 0');
-    window.scrollTo({left: 0, top: 0, behavior: 'smooth'});            setTimeout(function() {
-    console.log('#scrollIntoView toBottom');
-    document.getElementById('scrollIntoView')
-      .scrollIntoView({top: false, behavior: 'smooth'});         setTimeout(function() {
-    console.log('scrollBy 0 400');
-    window.scrollBy({left: 0, top: 400, behavior: 'smooth'});          setTimeout(function() {
-    console.log('scrollBy 0 -400');
-    window.scrollBy({left: 0, top: -400, behavior: 'smooth'});
-    }, T); }, T); }, T); }, T); }, T); }, T); }
+      .scrollIntoView({top: true, behavior: 'smooth'});
+       }, T); }, T); }
   , false);
   </script>
   <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">

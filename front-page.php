@@ -23,16 +23,16 @@
     <i class="material-icons">language</i>
 </button>
 <ul class="mdl-menu mdl-js-menu mdl-menu--top-right" for="lang-switcher">
-    <li class="mdl-menu__item">English</li>
-    <li class="mdl-menu__item">日本語</li>
-    <li class="mdl-menu__item">한국어</li>
+    <li class="mdl-menu__item"><a href="#how">How we Do it</a></li>
+    <li class="mdl-menu__item"><a href="#yellow">Yellow</a></li>
+    <li class="mdl-menu__item"><a href="#grey">Grey</a></li>
 </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+  <a name="how"></a>
 	<div class="content-grid mdl-grid" style="height:300px">
       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-color--yellow-500">
         One
@@ -44,8 +44,8 @@
         Three
       </div>
   </div>
-
-  	<div class="content-grid mdl-grid" style="height:300px">
+  <a name="yellow"></a>
+  	<div id='scrollIntoView' class="content-grid mdl-grid" style="height:300px">
       <div class="mdl-cell mdl-cell--1-col mdl-color--yellow-50">
         50
       </div>
@@ -82,7 +82,7 @@
         A700
       </div>
   </div>
-
+<a name="grey"></a>
 <div class="content-grid mdl-grid" style="height:300px">
     <div class="mdl-cell mdl-cell--1-col mdl-color--grey-50">
       50

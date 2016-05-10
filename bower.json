@@ -8,7 +8,8 @@
   "private": true,
   "dependencies": {
     "material-design-lite": "~1.0.4",
-    "modernizr": "2.8.2"
+    "modernizr": "2.8.2",
+    "smoothscroll": "^0.1.0"
   },
   "overrides": {
     "modernizr": {

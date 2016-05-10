@@ -1,4 +1,29 @@
-<header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
+ <script>
+    var T = 2000;
+  document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
+    console.log('scrollTo 0, 300');
+    window.scrollTo({left: 0, top: 300, behavior: 'smooth'});
+    setTimeout(function() {
+      console.log('scrollTo 0, 600');
+      window.scrollTo({left: 0, top: 1200, behavior: 'smooth'});
+    }, 150);
+    setTimeout(function() {
+    console.log('#scrollIntoView toTop');
+    document.getElementById('scrollIntoView')
+      .scrollIntoView({top: true, behavior: 'smooth'});          setTimeout(function() {
+    console.log('scrollTo 0, 0');
+    window.scrollTo({left: 0, top: 0, behavior: 'smooth'});            setTimeout(function() {
+    console.log('#scrollIntoView toBottom');
+    document.getElementById('scrollIntoView')
+      .scrollIntoView({top: false, behavior: 'smooth'});         setTimeout(function() {
+    console.log('scrollBy 0 400');
+    window.scrollBy({left: 0, top: 400, behavior: 'smooth'});          setTimeout(function() {
+    console.log('scrollBy 0 -400');
+    window.scrollBy({left: 0, top: -400, behavior: 'smooth'});
+    }, T); }, T); }, T); }, T); }, T); }, T); }
+  , false);
+  </script>
+  <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
   <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">
     <div class="mdl-layout-spacer"></div>
       <svg fill="#7f7d7b" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
@@ -61,4 +86,3 @@
   endif;
   ?>
 </div>
-

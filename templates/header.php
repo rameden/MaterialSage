@@ -5,6 +5,56 @@
       window.onscroll=function(){
         alert("you are scrolling");
       };
+      var didScroll = false;
+          main_header = document.getElementsByClassName('mdl-layout__header')[0];
+          main_container = document.getElementsByClassName('mdl-layout__content')[0];
+          header_rows = document.getElementsByClassName("mdl-layout__header-row");
+          fade_class = "mdl-layout__header-row fade_out";
+          opaque_class = "mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall";
+          transparent_class = "mdl-layout__header mdl-layout__header--transparent mdl-layout__header--waterfall";
+          display_class = "mdl-layout__header-row";
+          lastVal = 0;
+
+      main_container.onscroll = doThisStuffOnScroll;
+
+      function doThisStuffOnScroll() {
+        didScroll = true;
+      }
+
+      setInterval(function() {
+        if(didScroll) {
+            didScroll = false;
+            if (main_container.scrollTop >= 400) {
+              var st = main_container.scrollTop;
+                if (main_container.scrollTop > lastVal){
+                  hideMainHeader();
+                } else {
+                  // Scrolling up
+                  showMainHeader();
+                }
+                lastVal = st;
+            } else {
+              //show main header when in top 400 pixels
+              showMainHeader();
+            }
+        }
+      }, 500);
+
+      function hideMainHeader() {
+          for (var i = 1; i < header_rows.length; i++) {
+              header_rows[i].className = fade_class;
+          }
+          main_header.className = transparent_class;
+          main_header.setAttribute("style", "min-height:16px;transition-duration: 0.8s;transition-property: min-height, box-shadow;");
+        }
+
+      function showMainHeader() {
+          for (var i = 1; i < header_rows.length; i++) {
+              header_rows[i].className = display_class;
+          }
+          main_header.className = opaque_class;
+          main_header.removeAttribute("style");
+        }
       }, 2000)
     }, false);
 

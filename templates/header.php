@@ -1,6 +1,6 @@
  <script>
     //https://github.com/iamdustan/smoothscroll
-  /*document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
+  document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
       document.getElementById("buildcase").addEventListener("click", pageScrolling);
       window.onscroll=function(){
         alert("you are scrolling");
@@ -10,7 +10,7 @@
 
     function pageScrolling() {
       document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
-    }*/
+    }
 
 
 

@@ -26,3 +26,32 @@
   <?php dynamic_sidebar('sidebar-mini-footer'); ?>
 </footer>
 <?php } ?>
+<script type="text/javascript">
+
+var didScroll = false;
+
+
+var main_header = document.getElementsByClassName('mdl-layout__header')[0];
+var main_container = document.getElementsByClassName('mdl-layout__content')[0];
+var header_rows = document.getElementsByClassName("mdl-layout__header-row");
+
+main_container.onscroll = doThisStuffOnScroll;
+
+function doThisStuffOnScroll() {
+  didScroll = true;
+}
+
+setInterval(function() {
+  if(didScroll) {
+      didScroll = false;
+      if (main_container.scrollTop >= 400) {
+      header_rows[1].className += " fade_out";
+      header_rows[2].className += " fade_out";
+      main_header.className = "mdl-layout__header mdl-layout__header--transparent mdl-layout__header--waterfall";
+      main_header.setAttribute("style", "min-height:16px;transition-duration: 0.8s;transition-property: max-height, box-shadow;");
+      }
+  }
+}, 500);
+
+
+</script>

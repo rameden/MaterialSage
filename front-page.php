@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <div class="content-grid mdl-grid mdl-grid--no-spacing" style="height:300px">
+    <div class="content-grid mdl-grid mdl-grid--no-spacing" style="height:400px">
       <div style="text-align:center" class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--teal-400">
         <h2>Let’s Build <br />
         Your Case<br />
@@ -41,6 +41,16 @@
       </div>
   </div>
 
+        <div class="mdl-layout-spacer"></div>
+          <div class="mdl-grid mdl-color--orange-200">
+   <div class="mdl-layout-spacer"></div>
+   <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-cell--biography">
+      <p>After more than a decade and a half in civil law, I’m able to focus on a field that is meaningful and fulfilling. I have become an expert in representing people who have suffered serious injuries or death in nursing homes and assisted living facilities.</p>
+<p>Identifying and prosecuting cases of nursing home abuse allows me to work intimately with individuals and families in protecting our elders. And life is just too short not to make every day count.</p>
+<p>Some people see law as a tedious, drudging inevitability. For me, it’s an art. A case or a contract is like a piece of rough marble. We look at it from all possible angles and carve out something of beauty. A story that makes sense. And that is what wins cases.</p>
+   </div>
+   <div class="mdl-layout-spacer"></div>
+</div>
   <a name="how"></a>
 	<div class="content-grid mdl-grid" style="height:300px">
       <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-color--yellow-500">

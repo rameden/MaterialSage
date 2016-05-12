@@ -4,11 +4,6 @@
     @extend .mdl-color-text--grey-50;
 }
 
-//This necessary so window.onscroll would work.
-.mdl-layout__container {
-    height: auto;
-}
-
 body { scroll-behavior: smooth; }
 
 h1 {

@@ -11,7 +11,7 @@
           header_rows = document.getElementsByClassName("mdl-layout__header-row");
           fade_class = "mdl-layout__header-row fade_out";
           opaque_class = "mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall";
-          transparent_class = "mdl-layout__header mdl-layout__header--transparent mdl-layout__header--waterfall";
+          transparent_class = "mdl-layout__header mdl-layout__header--transparent";
           display_class = "mdl-layout__header-row";
           lastVal = 0;
 
@@ -24,14 +24,20 @@
       setInterval(function() {
         if(didScroll) {
             didScroll = false;
+
             if (main_container.scrollTop >= 400) {
+
               var st = main_container.scrollTop;
                 if (main_container.scrollTop > lastVal){
                   hideMainHeader();
-                } else {
+                } else if (( main_container.scrollTop  + 400 ) <= (main_container.scrollHeight - main_container.offsetHeight)) {
                   // Scrolling up
                   showMainHeader();
                 }
+
+            console.log(main_container.scrollTop);
+            console.log("main_container.scrollHeight - main_container.offsetHeight: ");
+            console.log(main_container.scrollHeight - main_container.offsetHeight)
                 lastVal = st;
             } else {
               //show main header when in top 400 pixels
@@ -62,11 +68,20 @@
       document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
     }
 
+    function getDocHeight() {
+    var D = document;
+    return Math.max(
+        D.body.scrollHeight, D.documentElement.scrollHeight,
+        D.body.offsetHeight, D.documentElement.offsetHeight,
+        D.body.clientHeight, D.documentElement.clientHeight
+        );
+    }
+
 
 
   </script>
 
-  <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500 mdl-layout__header--waterfall">
+  <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500">
   <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">
     <div class="mdl-layout-spacer"></div>
       <svg fill="#7f7d7b" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">

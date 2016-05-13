@@ -1,4 +1,4 @@
- <script>
+ <script type="text/javascript">
 //https://github.com/iamdustan/smoothscroll
 document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
   document.getElementById("buildcase").addEventListener("click", pageScrolling);
@@ -22,46 +22,40 @@ document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function(
 
   setInterval(function() {
     if(didScroll) {
-        didScroll = false;
-        if (main_container.scrollTop >= 400) {
-          var st = main_container.scrollTop;
-            if (main_container.scrollTop > lastVal){
-              hideMainHeader();
-            } else if (( main_container.scrollTop  + 400 ) <= (main_container.scrollHeight - main_container.offsetHeight)) {
-              // Scrolling up
-              showMainHeader();
-            }
-
-            lastVal = st;
+      didScroll = false;
+      if (main_container.scrollTop >= 400) {
+        var st = main_container.scrollTop;
+          if (main_container.scrollTop > lastVal){
+            modifyMainHeader(fade_class, transparent_class, true);
+          } else if (( main_container.scrollTop  + 400 ) <= (main_container.scrollHeight - main_container.offsetHeight)) {
+            // Scrolling up - show header
+            modifyMainHeader(display_class, opaque_class, false);
+          }
+          lastVal = st;
         } else {
           //show main header when in top 400 pixels
-          showMainHeader();
+          modifyMainHeader(display_class, opaque_class, false);
         }
       }
     }, 500); // /setInterval
   }, 2000) // /setTimeOut
 }, false); // /addEventListener
 
-function hideMainHeader() {
+function modifyMainHeader(visibility_class, opacity_class, hide) {
   for (var i = 1; i < header_rows.length; i++) {
-      header_rows[i].className = fade_class;
+    header_rows[i].className = visibility_class;
   }
-  main_header.className = transparent_class;
-  main_header.setAttribute("style", "min-height:16px;transition-duration: 0.8s;transition-property: min-height, box-shadow;");
+  main_header.className = opacity_class;
+  if (hide === true) {
+    main_header.setAttribute("style", "min-height:16px;transition-duration: 0.8s;transition-property: min-height, box-shadow;");
+  } else {
+    main_header.removeAttribute("style");
   }
-
-function showMainHeader() {
-  for (var i = 1; i < header_rows.length; i++) {
-      header_rows[i].className = display_class;
-  }
-  main_header.className = opaque_class;
-  main_header.removeAttribute("style");
-  }
+}
 
 function pageScrolling() {
   document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
 }
-
 </script>
 
 <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500">

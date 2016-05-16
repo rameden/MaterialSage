@@ -23,6 +23,10 @@
     }
 }
 
+.menu-item {
+  @extend .mdl-navigation__link;
+}
+
 .mdl-layout__drawer .mdl-layout-title {
     color: inherit;
     font-size: 1em;

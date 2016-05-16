@@ -17,6 +17,12 @@
     padding: 0 12px 0 52px;
 }
 
+.mdl-color-text--grey-200 {
+  svg {
+    fill:unquote("rgb(#{$palette-grey-400})") !important;
+    }
+}
+
 .mdl-layout__drawer .mdl-layout-title {
     color: inherit;
     font-size: 1em;

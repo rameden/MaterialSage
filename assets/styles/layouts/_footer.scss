@@ -35,6 +35,11 @@
   }
 }
 
+.mdl-mini-footer__left-section {
+  svg {
+    fill: unquote("rgb(#{$palette-yellow-100})") !important;
+    }
+}
 
 .mdl-mini-footer__link-list {
       flex-flow: row wrap;

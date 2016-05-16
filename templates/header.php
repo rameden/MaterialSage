@@ -1,7 +1,6 @@
  <script type="text/javascript">
 //https://github.com/iamdustan/smoothscroll
 document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
-  document.getElementById("buildcase").addEventListener("click", pageScrolling);
 
 // Make header disappear when scrolling down and return when scroll up.
   var didScroll = false;
@@ -53,10 +52,19 @@ function modifyMainHeader(visibility_class, opacity_class, hide) {
   }
 }
 
-function pageScrolling() {
-  document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
-}
 </script>
+
+<?php if ( is_front_page() && is_home() ): ?>
+<script>
+document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
+    function pageScrolling() {
+      document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
+    }
+    document.getElementById("buildcase").addEventListener("click", pageScrolling);
+  }, 2000) // /setTimeOut
+}, false); // /addEventListener
+</script>
+<?php endif; ?>
 
 <header class="mdl-layout__header mdl-color--grey-800 mdl-color-text--yellow-500">
 <div class="mdl-layout__header-row mdl-layout__header-row-sliver mdl-color-text--grey-200 mdl-color--yellow-50">
@@ -110,12 +118,12 @@ function pageScrolling() {
   <a class="mdl-layout-title" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
 
   <?php
-  if ( has_nav_menu( 'primary_navigation' ) ) :
+  if ( has_nav_menu( 'drawer_navigation' ) ) :
 
     // Remove wrapping <li> from around links
     // https://css-tricks.com/snippets/wordpress/remove-li-elements-from-output-of-wp_nav_menu/#comment-542093
     $cleanermenu = wp_nav_menu( array(
-      'theme_location' => 'primary_navigation',
+      'theme_location' => 'drawer_navigation',
       'container' => false,
       'items_wrap' => '<nav class="mdl-navigation">%3$s</nav>',
       'echo' => false,

@@ -25,4 +25,27 @@
   .textwidget {
     line-height: $footer-btn-size;
   }
+
+  span {
+    @extend .mdl-color-text--yellow-600;
+  }
+
+  a {
+    @extend .mdl-color-text--orange-100;
+  }
+}
+
+
+.mdl-mini-footer__link-list {
+      flex-flow: row wrap;
+      margin: 1.8rem 0;
+      @extend .mdl-color-text--yellow-100;
+  }
+
+.mdl-mini-footer__address {
+  line-height: 1em;
+  > span:first-child {
+    line-height: 1.2rem;
+    font-size: 1.3rem;
+  }
 }

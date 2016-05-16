@@ -1,4 +1,3 @@
-@import "../../bower_components/material-design-lite/src/color-definitions";
 
 .fade_out {
   display: none;
@@ -11,10 +10,6 @@
     text-decoration: none;
     word-spacing: -0.1rem;
     margin-top: 0.6rem;
-}
-
-.menu-item {
-  @extend .mdl-navigation__link;
 }
 
 .mdl-layout__header-row {
@@ -63,7 +58,7 @@
 }
 
 .mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header-row .menu-item {
-    border: 1px solid $palette-blue-700;
+    border: 1px solid $palette-teal-700;
     color: $palette-blue-700;
     display: block;
     line-height: 1.4rem;

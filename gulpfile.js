@@ -19,6 +19,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var iconify      = require('gulp-iconify');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -280,6 +281,31 @@ gulp.task('wiredep', function() {
     }))
     .pipe(gulp.dest(path.source + 'styles'));
 });
+
+// ### Gulp-iconify
+
+gulp.task('iconify', function () {
+    iconify({
+      src: [path.source + 'images/icons/*.svg'],
+      pngOutput: './assets/images/icons/png',
+      scssOutput: './sscs',
+      cssOutput: './css',
+      svgoOptions: {
+        enabled: true,
+        options: {
+          plugins: [
+            { removeUnknownsAndDefaults: false },
+            { mergePaths: false }
+          ]
+        }
+      },
+      svg2pngOptions: {
+        scaling: 1.0,
+        verbose: true,
+        concurrency: null
+      }
+    });
+  });
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.

@@ -266,6 +266,8 @@ gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
               ['fonts', 'images'],
+              'svgmin',
+              'svg2png',
               callback);
 });
 
@@ -299,6 +301,41 @@ gulp.task('iconify', function () {
       }
     });
   });
+
+// ### SVG to PNG
+var svg2png = require('gulp-svg2png');
+
+gulp.task('svg2png', function () {
+  gulp.src([path.source + 'images/*.svg'])
+    .pipe(svg2png())
+    .pipe(gulp.dest(path.dist + 'images'));
+});
+
+var svgmin = require('gulp-svgmin');
+
+gulp.task('svgmin', function() {
+  gulp.src([path.source + 'images/*.svg'])
+  .pipe(svgmin(function getOptions (file) {
+    var path = require("path");
+    var prefix = path.basename(file.relative, path.extname(file.relative));
+    return {
+      plugins: [{
+          removeDimensions: true
+        }, {
+          removeComments: true
+        }, {
+          cleanupNumericValues: {
+            floatPrecision: 2
+            }
+        }, {
+          addClassesToSVGElement: {
+            className: prefix,
+            }
+          }]
+        }
+      }))
+      .pipe(gulp.dest(path.dist + 'images'));
+});
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.

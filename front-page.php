@@ -1,4 +1,7 @@
 <?php
+
+use Roots\Sage\Assets;
+
 /**
  * Template Name: Home Template
  */
@@ -8,36 +11,12 @@
   <?php //get_template_part('templates/page', 'header'); ?>
   <?php //get_template_part('templates/content', 'page'); ?>
 
-  <!-- row for wells -->
-		<div class="content-grid mdl-grid mdl-grid--no-spacing mdl-color--blue-100">
-      <div class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone hero">
-        <div class="mdl-grid">
-          <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--6dp">
-            <div class="mdl-card__title">
-              <h1 class="mdl-card__title-text">Nursing Home Abuse</h1>
-            </div>
-            <div class="mdl-card__supporting-text">
-              <p>Elder neglect, or nursing home negligence, most commonly occurs when a resident does not receive proper medical, physical, or emotional attention. As a result, neglect can pose serious risk of harm to victims. In certain cases, neglect may escalate to physical or emotional abuse.</p>
-              <button class="mdl-button mdl-button--raised mdl-button--accent">I can help</button>
-              <button id="lang-switcher" class="mdl-button mdl-js-button mdl-button--icon">
-    <i class="material-icons">language</i>
-</button>
-<ul class="mdl-menu mdl-js-menu mdl-menu--top-right" for="lang-switcher">
-    <li class="mdl-menu__item"><a href="#how">How we Do it</a></li>
-    <li class="mdl-menu__item"><a href="#yellow">Yellow</a></li>
-    <li class="mdl-menu__item"><a href="#grey">Grey</a></li>
-</ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="content-grid mdl-grid mdl-grid--no-spacing" style="height:400px">
       <div style="text-align:center" class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--teal-400">
         <h2>Let’s Build <br />
         Your Case<br />
         Together</h2>
-        <i class="material-icons" id="buildcase" style="font-size:36px">file_download</i>
+        <a href="#" id="buildcase"><?php echo file_get_contents(Assets\asset_path('images/arrow-down.svg')) ?></a><br />
       </div>
   </div>
 

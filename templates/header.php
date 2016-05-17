@@ -54,7 +54,7 @@ function modifyMainHeader(visibility_class, opacity_class, hide) {
 
 </script>
 
-<?php if ( is_front_page() && is_home() ): ?>
+<?php if ( is_front_page() || is_home() ): ?>
 <script>
 document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
     function pageScrolling() {

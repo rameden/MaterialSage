@@ -13,6 +13,9 @@
 @import "components/forms";
 @import "components/grid";
 @import "components/wp-classes";
+@import "./components/icons.fallback.scss";
+@import "./components/icons.png.scss";
+@import "./components/icons.svg.scss";
 @import "layouts/header";
 @import "layouts/sidebar";
 @import "layouts/footer";

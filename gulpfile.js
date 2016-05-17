@@ -288,6 +288,10 @@ gulp.task('iconify', function () {
     iconify({
       src: [path.source + 'images/icons/*.svg'],
       pngOutput: './assets/images/icons/png',
+      scssOutput: './assets/styles/components',
+      cssOutput: './css',
+      defaultWidth: '300px',
+      defaultHeight: '200px',
       svg2pngOptions: {
         scaling: 1.0,
         verbose: true,

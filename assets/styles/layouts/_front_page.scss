@@ -6,3 +6,12 @@
 .mdl-cell--biography p {
   @include typo-headline();
 }
+
+h2.front-page {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.001rem;
+  text-decoration: none;
+  word-spacing: -0.1rem;
+  color: hsla(253, 6%, 74%, 1);
+  }

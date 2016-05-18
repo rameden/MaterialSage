@@ -12,11 +12,13 @@ use Roots\Sage\Assets;
   <?php //get_template_part('templates/content', 'page'); ?>
 
     <div class="content-grid mdl-grid mdl-grid--no-spacing" style="height:400px">
-      <div style="text-align:center" class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--teal-400">
-        <h2>Let’s Build <br />
+      <div style="text-align:center" class="mdl-cell mdl-cell--12-col mdl-cell--8-col-tablet mdl-cell--4-col-phone mdl-color--teal-500">
+        <h2 class="front-page">Let’s Build <br />
         Your Case<br />
         Together</h2>
-        <a href="#" id="buildcase"><?php echo file_get_contents(Assets\asset_path('images/arrow-down.svg')) ?></a><br />
+        <a href="#" id="buildcase">
+        <?php echo file_get_contents(Assets\asset_path('images/arrow-down.svg')) ?></a><br />
+        <img class="fallback" src="<?= Assets\asset_path('images/arrow-down.png') ?>" />
       </div>
   </div>
 

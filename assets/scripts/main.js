@@ -74,4 +74,11 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
+  //https://css-tricks.com/using-svg/#comment-297467
+  if (true) {
+    $('img[src$=".svg"]').each(function() {
+      var $this = $(this); // this = img
+      $this.attr('src', $this.attr('src').replace(/svg$/, 'png'));
+    });
+  }
 })(jQuery); // Fully reference jQuery after this point.

@@ -311,6 +311,7 @@ gulp.task('svg2png', function () {
     .pipe(gulp.dest(path.dist + 'images'));
 });
 
+// ### SVG MIN - variation of svgo for Gulp
 var svgmin = require('gulp-svgmin');
 
 gulp.task('svgmin', function() {
@@ -320,7 +321,7 @@ gulp.task('svgmin', function() {
     var prefix = path.basename(file.relative, path.extname(file.relative));
     return {
       plugins: [{
-          removeDimensions: true
+          removeDimensions: false
         }, {
           removeComments: true
         }, {
@@ -329,10 +330,10 @@ gulp.task('svgmin', function() {
             }
         }, {
           addClassesToSVGElement: {
-            className: prefix,
+            className: prefix + ' svg',
             }
           }]
-        }
+        };
       }))
       .pipe(gulp.dest(path.dist + 'images'));
 });

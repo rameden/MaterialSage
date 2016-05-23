@@ -27,20 +27,41 @@ use Roots\Sage\Assets;
       height: auto;
     }
 
+    .front-page__cover {
+      min-height: 200px;
+    }
+
+    .mdl-card__media > img {
+      max-width: 100%;
+    }
+    .mdl-card__actions {
+      display: flex;
+      box-sizing:border-box;
+      align-items: center;
+    }
+    .mdl-card__actions > .mdl-button--icon {
+      margin-right: 3px;
+      margin-left: 3px;
+    }
 
   </style>
 </head>
+
 <script type="text/javascript">
+
 // SVG feature detection
-var isSVG = !!document.createElementNS &&
-            !!document.createElementNS('http://www.w3.org/2000/svg',
-                                        'svg').createSVGRect;
-console.log(isSVG)
-// If SVG is supported, add `.svg` class to <html> element
-if ( !isSVG ) {
-console.log('!isSVG')
-    document.documentElement.className += ' svg';
-}
+;(function (window, document, undefined) {
+
+	'use strict';
+
+	// SVG feature detection
+	var supports = !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect;
+	if ( !supports ) return;
+
+	// Add `.svg` class to <html> element
+	document.documentElement.className += (document.documentElement.className ? ' ' : '') + 'svg';
+
+})(window, document);
 
 //https://github.com/iamdustan/smoothscroll
 document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
@@ -67,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function(
       didScroll = false;
       if (main_container.scrollTop >= 400) {
         var st = main_container.scrollTop;
-          if (main_container.scrollTop > lastVal){
+          if (main_container.scrollTop > lastVal - 100){
             modifyMainHeader(fade_class, transparent_class, true);
           } else if (( main_container.scrollTop  + 400 ) <= (main_container.scrollHeight - main_container.offsetHeight)) {
             // Scrolling up - show header
@@ -79,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function(
           modifyMainHeader(display_class, opaque_class, false);
         }
       }
-    }, 500); // /setInterval
+    }, 100); // /setInterval
   }, 2000) // /setTimeOut
 }, false); // /addEventListener
 
@@ -97,14 +118,3 @@ function modifyMainHeader(visibility_class, opacity_class, hide) {
 
 </script>
 
-<?php if ( is_front_page() || is_home() ): ?>
-<script>
-document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
-    function pageScrolling() {
-      document.getElementById('scrollIntoView').scrollIntoView({top: true, behavior: 'smooth'});
-    }
-    document.getElementById("buildcase").addEventListener("click", pageScrolling);
-  }, 2000) // /setTimeOut
-}, false); // /addEventListener
-</script>
-<?php endif; ?>

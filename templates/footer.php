@@ -55,3 +55,24 @@
 
   </div>
 </footer>
+
+<?php if ( is_front_page() || is_home() ): ?>
+<script>
+document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function() {
+    function pageScrolling(elementID) {
+      document.getElementById(elementID).scrollIntoView({top: true, behavior: 'smooth'});
+    }
+    document.getElementById("arrow1").addEventListener("click", pageScrolling.bind(null, "frontpage2"));
+    document.getElementById("arrow2").addEventListener("click", pageScrolling.bind(null, "frontpage3"));
+  }, 2000) // /setTimeOut
+}, false); // /addEventListener
+
+// Fill viewport
+var vWidth = window.innerWidth;
+    vHeight = window.innerHeight;
+    cover = document.getElementsByClassName('front-page__cover')[0];
+
+cover.setAttribute("style", "height: " + vHeight + 'px');
+
+</script>
+<?php endif; ?>

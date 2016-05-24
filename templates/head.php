@@ -21,19 +21,34 @@ use Roots\Sage\Assets;
       display: block;
     }
 
-    .arrow-down {
+    .arrow-pointer {
       fill: hsla(253, 6%, 74%, 1);
       width: 8rem;
       height: auto;
     }
 
+    .biopic {
+      width: 400px;
+      height: auto;
+    }
+
     .front-page__cover {
       min-height: 200px;
+      padding: 2rem 0;
+    }
+
+    .front-page__cover p {
+      font-size: 1.6rem;
     }
 
     .mdl-card__media > img {
       max-width: 100%;
     }
+
+    .front-page__card_two {
+      align-items: center;
+    }
+
     .mdl-card__actions {
       display: flex;
       box-sizing:border-box;
@@ -43,6 +58,50 @@ use Roots\Sage\Assets;
       margin-right: 3px;
       margin-left: 3px;
     }
+
+    .front-page__card_one .mdl-card__supporting-text > span {
+      font-weight: 900;
+      font-size: 2.5rem;
+      text-align: center;
+      line-height: 2rem;
+    }
+
+    .mdl-card__media {
+        margin: 0;
+    }
+
+    .hero {
+  background: hsla(201, 61%, 50%, 1) url("../images/Mediation-lawyer-tampa-bay1-1200.jpg") repeat scroll center center / 1200px 555px;
+  height:555px;
+}
+
+.mdl-cell--biography p {
+  @include typo-headline();
+}
+
+h2.front-page {
+  font-size: 3rem;
+  line-height: 3rem;
+  letter-spacing: -0.001rem;
+  text-decoration: none;
+  word-spacing: -0.1rem;
+  color: hsla(253, 6%, 74%, 1);
+  }
+
+@media (min-width: 37rem) {
+h2.front-page {
+  font-size: 5rem;
+  line-height: 5rem;
+  letter-spacing: -0.001rem;
+  text-decoration: none;
+  word-spacing: -0.1rem;
+  color: hsla(253, 6%, 74%, 1);
+  }
+}
+
+@media (min-width: 60rem) {
+
+}
 
   </style>
 </head>
@@ -100,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function(e) { setTimeout(function(
           modifyMainHeader(display_class, opaque_class, false);
         }
       }
-    }, 100); // /setInterval
+    }, 500); // /setInterval
   }, 2000) // /setTimeOut
 }, false); // /addEventListener
 

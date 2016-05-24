@@ -213,11 +213,19 @@ gulp.task('fonts', function() {
 // `gulp images` - Run lossless compression on all the images.
 gulp.task('images', function() {
   return gulp.src(globs.images)
-    .pipe(imagemin({
+    .pipe(imagemin( function getOptions ( file ) {
+      var path = require("path");
+      var prefix = path.basename(file.relative, path.extname(file.relative));
+      return {
       progressive: true,
       interlaced: true,
-      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false}]
-    }))
+      svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false},
+        {addClassesToSVGElement: {
+            className: prefix + ' svgfile',
+            }}]
+          };
+        }
+    ))
     .pipe(gulp.dest(path.dist + 'images'))
     .pipe(browserSync.stream());
 });
@@ -330,7 +338,7 @@ gulp.task('svgmin', function() {
             }
         }, {
           addClassesToSVGElement: {
-            className: prefix + ' svg',
+            className: prefix + ' svgfile',
             }
           }]
         };

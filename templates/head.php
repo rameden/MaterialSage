@@ -70,37 +70,92 @@ use Roots\Sage\Assets;
         margin: 0;
     }
 
-    .hero {
-  background: hsla(201, 61%, 50%, 1) url("../images/Mediation-lawyer-tampa-bay1-1200.jpg") repeat scroll center center / 1200px 555px;
-  height:555px;
-}
+
 
 .mdl-cell--biography p {
   @include typo-headline();
 }
 
-h2.front-page {
-  font-size: 3rem;
-  line-height: 3rem;
-  letter-spacing: -0.001rem;
-  text-decoration: none;
-  word-spacing: -0.1rem;
-  color: hsla(253, 6%, 74%, 1);
+.picture_text {
+    color: #fffaf5;
+    font-family: "BrandonGrotesque-Bold";
+    font-size: 60px;
+    letter-spacing: 6px;
+    line-height: 62px;
+    text-transform: uppercase;
+}
+
+ .hero {
+    height: 632px;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+    }
+
+#about_image .textholder {
+    height: 100%;
+    margin-left: 24%;
+    max-width: 200px;
+    position: relative;
+}
+
+#about_image .hero .picture_text {
+    left: -58px;
+    line-height: 42px;
+    right: 0;
+    top: 70px;
+    width: 220px;
   }
 
 @media (min-width: 37rem) {
-h2.front-page {
-  font-size: 5rem;
-  line-height: 5rem;
-  letter-spacing: -0.001rem;
-  text-decoration: none;
-  word-spacing: -0.1rem;
-  color: hsla(253, 6%, 74%, 1);
+#about_image .textholder {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+  }
+  #about_image .hero .picture_text {
+    right: 10%;
+  }
+  #about_image .image .picture_text {
+    left: inherit;
+    right: 164px;
+    top: 150px;
+    width: 290px;
   }
 }
 
 @media (min-width: 60rem) {
-
+  .hero {
+    left: inherit;
+    right: 164px;
+    top: 150px;
+    width: 290px;
+    }
+  #about_image .textholder {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+  }
+  #about_image .hero .picture_text {
+    left: inherit;
+    right: 164px;
+    top: 150px;
+    width: 290px;
+}
+.picture_text {
+    color: #fffaf5;
+    font-family: "BrandonGrotesque-Bold";
+    font-size: 60px;
+    letter-spacing: 6px;
+    line-height: 62px;
+    position: absolute;
+    text-transform: uppercase;
+    top: 180px;
+    width: 720px;
+}
 }
 
   </style>

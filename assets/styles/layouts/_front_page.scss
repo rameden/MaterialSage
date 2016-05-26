@@ -1,1 +1,15 @@
+.hero {
+    background: rgba(0, 0, 0, 0) url("../images/callmebobby.jpg") no-repeat scroll 34% 20% / cover ;
+    height: 632px;
+}
+
+.hero {
+  background: hsla(201, 61%, 50%, 1) url("../images/callmebobby.jpg") no-repeat scroll 34% 20% / cover ;
+  height:632px;
+    margin: 0 auto;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+
 

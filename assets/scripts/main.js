@@ -81,4 +81,43 @@
       $this.attr('src', $this.attr('src').replace(/svg$/, 'png'));
     });
   }
+
+  $('.mdl_drawer_button').click(function(){
+   if($('.mdl-layout__drawer').hasClass('active')){
+      $('.mdl-layout__drawer').removeClass('active');
+   }
+   else{
+      $('.mdl-layout__drawer').addClass('active');
+   }
+  });
+
+  $('.mdl-layout__obfuscator-right').click(function(){
+   if($('.mdl-layout__drawer').hasClass('active')){
+      $('.mdl-layout__drawer').removeClass('active');
+   }
+   else{
+      $('.mdl-layout__drawer').addClass('active');
+   }
+  });
+
+  //This is so that on larger screens, only one response-definition will show at a time.
+  $(".list__item").click(function () {
+    var vWidth = window.innerWidth;
+    if (vWidth > 480) {
+      $(this).siblings().each(function (index) {
+        $(this).find('div').hide();
+      });
+    }
+  });
+
+
+  $('#cta-button').animate({
+    opacity: 1,
+    right: "3rem",
+    bottom: "10px",
+    height: "toggle"
+    }, 1000, function() {
+    // Animation complete.
+    }).css('position','fixed');
+
 })(jQuery); // Fully reference jQuery after this point.

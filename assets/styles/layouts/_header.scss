@@ -3,13 +3,42 @@
   display: none;
 }
 
+.mdl-layout__header, .mdl-layout__drawer, .mdl-mega-footer, .mdl-layout-title, .mdl-layout__title, .mdl-layout-subtitle, .mdl-layout__subtitle {
+  font-family: $sans-serif-font;
+}
+
+.mdl-layout__header-row-sliver a {
+  color: unquote("rgb(#{$palette-grey-200})");
+  text-decoration: none;
+}
+
+.mdl-layout__header-row-sliver a:hover {
+  color: unquote("rgb(#{$palette-grey-800})");
+  text-decoration: underline;
+}
+
+.nav-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  fill: #f0eeeb;
+  margin: 2rem .5rem;
+}
+
 .mdl-layout-title {
     color: inherit;
-    font-size: 1.3rem;
-    letter-spacing: -0.001rem;
+    font-size: 1.65rem;
+    letter-spacing: -0.005rem;
     text-decoration: none;
-    word-spacing: -0.1rem;
-    margin-top: 0.6rem;
+    word-spacing: -0.2rem;
+    margin-top: 3.7rem;
+}
+
+.mdl-layout__header-row .mdl-navigation {
+  margin-top: 3rem;
+ a {
+      margin: 0 2em;
+    }
 }
 
 .mdl-layout__header-row {
@@ -28,17 +57,21 @@
 }
 
 .mdl-layout__drawer .mdl-layout-title {
-    color: inherit;
-    font-size: 1em;
+    color: unquote("rgb(#{$palette-alabaster-500})");
+    font-size: 1.5em;
     letter-spacing: -0.001rem;
     text-decoration: none;
     word-spacing: -0.1rem;
+    margin-top: 0;
+    border-bottom: 1px solid unquote("rgb(#{$palette-turquoise-A700})");
+    @include linear-gradient(42deg, unquote("rgb(#{$palette-turquoise-700})") 0%, unquote("rgb(#{$palette-turquoise-600})") 30%, unquote("rgb(#{$palette-grey-500})") 100%);
 }
 
 .mdl-layout-subtitle {
   color: inherit;
   text-decoration: none;
-  font-size: .78rem;
+  font-size: 0.86rem;
+  margin-top: 2.2rem;
 }
 
 .mdl-layout__header-row-thin {
@@ -59,8 +92,24 @@
     margin-top: $height-of-sliver-row !important;
 }
 
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link, .mdl-layout__drawer .mdl-navigation .menu-item {
+    color: #757575;
+    display: block;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 16px 40px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover, .mdl-layout__drawer .mdl-navigation .menu-item:hover {
+    color: unquote("rgb(#{$color-primary-contrast})");
+    display: block;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 16px 40px;
+}
+
 .mdl-layout__header {
-  min-height: 5rem;
+  min-height: 8rem;
 }
 
 .mdl-layout--large-screen-only {
@@ -68,8 +117,8 @@
 }
 
 .mdl-layout__header-row .mdl-navigation__link, .mdl-layout__header-row .menu-item {
-    border: 1px solid $palette-teal-700;
-    color: $palette-blue-700;
+    //border: 1px solid unquote("rgb(#{$palette-teal-700})");
+    color: unquote("rgb(#{$palette-mandarin-700})");
     display: block;
     line-height: 1.4rem;
     margin-top: $height-of-sliver-row * 2;
@@ -83,26 +132,19 @@
 
 //Breakpoints 480, 600, 840, 960, 1280, 1440, and 1600dp.
 
-@media (min-width: 37rem) {
-  .mdl-layout-title {
-      color: inherit;
-      font-size: 1.5rem;
-      letter-spacing: .4rem;
-      text-decoration: none;
-      word-spacing: .1rem;
+@media (min-width: 480) {
+  .mdl-layout__header .mdl-layout__drawer-button {
+    display: none;
   }
+}
+
+@media (min-width: 37rem) {
 
   .mdl-layout__header-row {
     //height: 56px;
     padding: 0 12px 0 62px;
   }
 
-  .mdl-layout-subtitle {
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: .25rem;
-    font-size: .9rem;
-  }
 
   .mdl-layout__header-row-thin {
     height: 1.5rem;
@@ -118,25 +160,37 @@
   }
 }
 
-@media (min-width: 60rem) {
+@media (min-width: 840px) {
+
   .mdl-layout-title {
       color: inherit;
-      font-size: 1.5rem;
-      letter-spacing: .5rem;
+      font-size: 2.5rem;
+      letter-spacing: .4rem;
       text-decoration: none;
+      word-spacing: .1rem;
+      margin-top: 3.6;
+  }
+
+  .mdl-layout-subtitle {
+    color: inherit;
+    font-size: 1.25rem;
+    text-decoration: none;
+    letter-spacing: .25rem;
+    font-size: .9rem;
+    margin-top: 3.3rem;
+  }
+
+}
+
+@media (min-width: 60rem) {
+  .mdl-layout-title {
+      letter-spacing: .5rem;
       word-spacing: .3rem;
       line-height: 2rem;
   }
 
   .mdl-layout__header-row {
     padding: 0 12px 0 92px;
-  }
-
-  .mdl-layout-subtitle {
-    color: inherit;
-    text-decoration: none;
-    letter-spacing: .27rem;
-    font-size: .96rem;
   }
 
   .mdl-layout__header-row-thin {
@@ -146,4 +200,10 @@
   .mdl-navigation {
     display: block;
   }
+
+  .mdl-layout__header-row .mdl-navigation a {
+    display: inline-block !important;
+    margin-top: 2rem;
+  }
+
 }

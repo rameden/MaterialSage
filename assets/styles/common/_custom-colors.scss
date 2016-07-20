@@ -135,7 +135,7 @@ $palette-grey-A700: nth($palette-grey, 14);
     background-color: unquote("rgb(#{$palette-grey-A700})") !important;
   }
 
-  $palette-yellow:
+  $palette-alabaster:
 "255, 255, 255"
 "240, 238, 234"
 "242, 239, 232"
@@ -151,124 +151,397 @@ $palette-grey-A700: nth($palette-grey, 14);
 "205, 193, 167"
 "196, 182, 151";
 
-$palette-yellow-50: nth($palette-yellow, 1);
-$palette-yellow-100: nth($palette-yellow, 2);
-$palette-yellow-200: nth($palette-yellow, 3);
-$palette-yellow-300: nth($palette-yellow, 4);
-$palette-yellow-400: nth($palette-yellow, 5);
-$palette-yellow-500: nth($palette-yellow, 6);
-$palette-yellow-600: nth($palette-yellow, 7);
-$palette-yellow-700: nth($palette-yellow, 8);
-$palette-yellow-800: nth($palette-yellow, 9);
-$palette-yellow-900: nth($palette-yellow, 10);
-$palette-yellow-A100: nth($palette-yellow, 11);
-$palette-yellow-A200: nth($palette-yellow, 12);
-$palette-yellow-A400: nth($palette-yellow, 13);
-$palette-yellow-A700: nth($palette-yellow, 14);
+$palette-alabaster-50: nth($palette-alabaster, 1);
+$palette-alabaster-100: nth($palette-alabaster, 2);
+$palette-alabaster-200: nth($palette-alabaster, 3);
+$palette-alabaster-300: nth($palette-alabaster, 4);
+$palette-alabaster-400: nth($palette-alabaster, 5);
+$palette-alabaster-500: nth($palette-alabaster, 6);
+$palette-alabaster-600: nth($palette-alabaster, 7);
+$palette-alabaster-700: nth($palette-alabaster, 8);
+$palette-alabaster-800: nth($palette-alabaster, 9);
+$palette-alabaster-900: nth($palette-alabaster, 10);
+$palette-alabaster-A100: nth($palette-alabaster, 11);
+$palette-alabaster-A200: nth($palette-alabaster, 12);
+$palette-alabaster-A400: nth($palette-alabaster, 13);
+$palette-alabaster-A700: nth($palette-alabaster, 14);
 
-  // yellow
+  // alabaster
 
-  .mdl-color-text--yellow {
-    color: unquote("rgb(#{$palette-yellow-500})") !important;
+  .mdl-color-text--alabaster {
+    color: unquote("rgb(#{$palette-alabaster-500})") !important;
   }
 
-  .mdl-color--yellow {
-    background-color: unquote("rgb(#{$palette-yellow-500})") !important;
+  .mdl-color--alabaster {
+    background-color: unquote("rgb(#{$palette-alabaster-500})") !important;
   }
 
-  .mdl-color-text--yellow-50 {
-    color: unquote("rgb(#{$palette-yellow-50})") !important;
+  .mdl-color-text--alabaster-50 {
+    color: unquote("rgb(#{$palette-alabaster-50})") !important;
   }
 
-  .mdl-color--yellow-50 {
-    background-color: unquote("rgb(#{$palette-yellow-50})") !important;
+  .mdl-color--alabaster-50 {
+    background-color: unquote("rgb(#{$palette-alabaster-50})") !important;
   }
 
-  .mdl-color-text--yellow-100 {
-    color: unquote("rgb(#{$palette-yellow-100})") !important;
+  .mdl-color-text--alabaster-100 {
+    color: unquote("rgb(#{$palette-alabaster-100})") !important;
   }
 
-  .mdl-color--yellow-100 {
-    background-color: unquote("rgb(#{$palette-yellow-100})") !important;
+  .mdl-color--alabaster-100 {
+    background-color: unquote("rgb(#{$palette-alabaster-100})") !important;
   }
 
-  .mdl-color-text--yellow-200 {
-    color: unquote("rgb(#{$palette-yellow-200})") !important;
+  .mdl-color-text--alabaster-200 {
+    color: unquote("rgb(#{$palette-alabaster-200})") !important;
   }
 
-  .mdl-color--yellow-200 {
-    background-color: unquote("rgb(#{$palette-yellow-200})") !important;
+  .mdl-color--alabaster-200 {
+    background-color: unquote("rgb(#{$palette-alabaster-200})") !important;
   }
 
-  .mdl-color-text--yellow-300 {
-    color: unquote("rgb(#{$palette-yellow-300})") !important;
+  .mdl-color-text--alabaster-300 {
+    color: unquote("rgb(#{$palette-alabaster-300})") !important;
   }
 
-  .mdl-color--yellow-300 {
-    background-color: unquote("rgb(#{$palette-yellow-300})") !important;
+  .mdl-color--alabaster-300 {
+    background-color: unquote("rgb(#{$palette-alabaster-300})") !important;
   }
 
-  .mdl-color-text--yellow-400 {
-    color: unquote("rgb(#{$palette-yellow-400})") !important;
+  .mdl-color-text--alabaster-400 {
+    color: unquote("rgb(#{$palette-alabaster-400})") !important;
   }
 
-  .mdl-color--yellow-400 {
-    background-color: unquote("rgb(#{$palette-yellow-400})") !important;
+  .mdl-color--alabaster-400 {
+    background-color: unquote("rgb(#{$palette-alabaster-400})") !important;
   }
 
-  .mdl-color-text--yellow-500 {
-    color: unquote("rgb(#{$palette-yellow-500})") !important;
+  .mdl-color-text--alabaster-500 {
+    color: unquote("rgb(#{$palette-alabaster-500})") !important;
   }
 
-  .mdl-color--yellow-500 {
-    background-color: unquote("rgb(#{$palette-yellow-500})") !important;
+  .mdl-color--alabaster-500 {
+    background-color: unquote("rgb(#{$palette-alabaster-500})") !important;
   }
 
-  .mdl-color-text--yellow-600 {
-    color: unquote("rgb(#{$palette-yellow-600})") !important;
+  .mdl-color-text--alabaster-600 {
+    color: unquote("rgb(#{$palette-alabaster-600})") !important;
   }
 
-  .mdl-color--yellow-600 {
-    background-color: unquote("rgb(#{$palette-yellow-600})") !important;
+  .mdl-color--alabaster-600 {
+    background-color: unquote("rgb(#{$palette-alabaster-600})") !important;
   }
 
-  .mdl-color-text--yellow-700 {
-    color: unquote("rgb(#{$palette-yellow-700})") !important;
+  .mdl-color-text--alabaster-700 {
+    color: unquote("rgb(#{$palette-alabaster-700})") !important;
   }
 
-  .mdl-color--yellow-700 {
-    background-color: unquote("rgb(#{$palette-yellow-700})") !important;
+  .mdl-color--alabaster-700 {
+    background-color: unquote("rgb(#{$palette-alabaster-700})") !important;
   }
 
-  .mdl-color-text--yellow-800 {
-    color: unquote("rgb(#{$palette-yellow-800})") !important;
+  .mdl-color-text--alabaster-800 {
+    color: unquote("rgb(#{$palette-alabaster-800})") !important;
   }
 
-  .mdl-color--yellow-800 {
-    background-color: unquote("rgb(#{$palette-yellow-800})") !important;
+  .mdl-color--alabaster-800 {
+    background-color: unquote("rgb(#{$palette-alabaster-800})") !important;
   }
 
-  .mdl-color-text--yellow-900 {
-    color: unquote("rgb(#{$palette-yellow-900})") !important;
+  .mdl-color-text--alabaster-900 {
+    color: unquote("rgb(#{$palette-alabaster-900})") !important;
   }
 
-  .mdl-color--yellow-900 {
-    background-color: unquote("rgb(#{$palette-yellow-900})") !important;
+  .mdl-color--alabaster-900 {
+    background-color: unquote("rgb(#{$palette-alabaster-900})") !important;
   }
 
-  .mdl-color--yellow-A100 {
-    background-color: unquote("rgb(#{$palette-yellow-A100})") !important;
+  .mdl-color--alabaster-A100 {
+    background-color: unquote("rgb(#{$palette-alabaster-A100})") !important;
   }
 
-  .mdl-color--yellow-A200 {
-    background-color: unquote("rgb(#{$palette-yellow-A200})") !important;
+  .mdl-color--alabaster-A200 {
+    background-color: unquote("rgb(#{$palette-alabaster-A200})") !important;
   }
 
-  .mdl-color--yellow-A400 {
-    background-color: unquote("rgb(#{$palette-yellow-A400})") !important;
+  .mdl-color--alabaster-A400 {
+    background-color: unquote("rgb(#{$palette-alabaster-A400})") !important;
   }
 
-  .mdl-color--yellow-A700 {
-    background-color: unquote("rgb(#{$palette-yellow-A700})") !important;
+  .mdl-color--alabaster-A700 {
+    background-color: unquote("rgb(#{$palette-alabaster-A700})") !important;
   }
 
+$palette-mandarin:
+"249, 206, 165"
+"247, 193, 141"
+"245, 180, 117"
+"243, 167, 94"
+"242, 154, 70"
+"240, 141, 46"
+"238, 128, 22"
+"219, 115, 16"
+"195, 103, 14"
+"172, 90, 12"
+"250, 219, 189"
+"252, 232, 213"
+"254, 245, 236"
+"148, 78, 11";
+
+$palette-mandarin-50: nth($palette-mandarin, 1);
+$palette-mandarin-100: nth($palette-mandarin, 2);
+$palette-mandarin-200: nth($palette-mandarin, 3);
+$palette-mandarin-300: nth($palette-mandarin, 4);
+$palette-mandarin-400: nth($palette-mandarin, 5);
+$palette-mandarin-500: nth($palette-mandarin, 6);
+$palette-mandarin-600: nth($palette-mandarin, 7);
+$palette-mandarin-700: nth($palette-mandarin, 8);
+$palette-mandarin-800: nth($palette-mandarin, 9);
+$palette-mandarin-900: nth($palette-mandarin, 10);
+$palette-mandarin-A100: nth($palette-mandarin, 11);
+$palette-mandarin-A200: nth($palette-mandarin, 12);
+$palette-mandarin-A400: nth($palette-mandarin, 13);
+$palette-mandarin-A700: nth($palette-mandarin, 14);
+
+  // Grey
+
+  .mdl-color-text--mandarin {
+    color: unquote("rgb(#{$palette-mandarin-500})") !important;
+  }
+
+  .mdl-color--mandarin {
+    background-color: unquote("rgb(#{$palette-mandarin-500})") !important;
+  }
+
+  .mdl-color-text--mandarin-50 {
+    color: unquote("rgb(#{$palette-mandarin-50})") !important;
+  }
+
+  .mdl-color--mandarin-50 {
+    background-color: unquote("rgb(#{$palette-mandarin-50})") !important;
+  }
+
+  .mdl-color-text--mandarin-100 {
+    color: unquote("rgb(#{$palette-mandarin-100})") !important;
+  }
+
+  .mdl-color--mandarin-100 {
+    background-color: unquote("rgb(#{$palette-mandarin-100})") !important;
+  }
+
+  .mdl-color-text--mandarin-200 {
+    color: unquote("rgb(#{$palette-mandarin-200})") !important;
+  }
+
+  .mdl-color--mandarin-200 {
+    background-color: unquote("rgb(#{$palette-mandarin-200})") !important;
+  }
+
+  .mdl-color-text--mandarin-300 {
+    color: unquote("rgb(#{$palette-mandarin-300})") !important;
+  }
+
+  .mdl-color--mandarin-300 {
+    background-color: unquote("rgb(#{$palette-mandarin-300})") !important;
+  }
+
+  .mdl-color-text--mandarin-400 {
+    color: unquote("rgb(#{$palette-mandarin-400})") !important;
+  }
+
+  .mdl-color--mandarin-400 {
+    background-color: unquote("rgb(#{$palette-mandarin-400})") !important;
+  }
+
+  .mdl-color-text--mandarin-500 {
+    color: unquote("rgb(#{$palette-mandarin-500})") !important;
+  }
+
+  .mdl-color--mandarin-500 {
+    background-color: unquote("rgb(#{$palette-mandarin-500})") !important;
+  }
+
+  .mdl-color-text--mandarin-600 {
+    color: unquote("rgb(#{$palette-mandarin-600})") !important;
+  }
+
+  .mdl-color--mandarin-600 {
+    background-color: unquote("rgb(#{$palette-mandarin-600})") !important;
+  }
+
+  .mdl-color-text--mandarin-700 {
+    color: unquote("rgb(#{$palette-mandarin-700})") !important;
+  }
+
+  .mdl-color--mandarin-700 {
+    background-color: unquote("rgb(#{$palette-mandarin-700})") !important;
+  }
+
+  .mdl-color-text--mandarin-800 {
+    color: unquote("rgb(#{$palette-mandarin-800})") !important;
+  }
+
+  .mdl-color--mandarin-800 {
+    background-color: unquote("rgb(#{$palette-mandarin-800})") !important;
+  }
+
+  .mdl-color-text--mandarin-900 {
+    color: unquote("rgb(#{$palette-mandarin-900})") !important;
+  }
+
+  .mdl-color--mandarin-900 {
+    background-color: unquote("rgb(#{$palette-mandarin-900})") !important;
+  }
+
+  .mdl-color--mandarin-A100 {
+    background-color: unquote("rgb(#{$palette-mandarin-A100})") !important;
+  }
+
+  .mdl-color--mandarin-A200 {
+    background-color: unquote("rgb(#{$palette-mandarin-A200})") !important;
+  }
+
+  .mdl-color--mandarin-A400 {
+    background-color: unquote("rgb(#{$palette-mandarin-A400})") !important;
+  }
+
+  .mdl-color--mandarin-A700 {
+    background-color: unquote("rgb(#{$palette-mandarin-A700})") !important;
+  }
+
+$palette-turquoise:
+"204, 230, 235"
+"186, 221, 228"
+"168, 211, 221"
+"150, 202, 213"
+"131, 193, 206"
+"113, 184, 199"
+"95, 175, 192"
+"76, 166, 185"
+"67, 151, 169"
+"59, 135, 151"
+"223, 239, 242"
+"241, 248, 249"
+"255, 255, 255"
+"52, 118, 132";
+
+$palette-turquoise-50: nth($palette-turquoise, 1);
+$palette-turquoise-100: nth($palette-turquoise, 2);
+$palette-turquoise-200: nth($palette-turquoise, 3);
+$palette-turquoise-300: nth($palette-turquoise, 4);
+$palette-turquoise-400: nth($palette-turquoise, 5);
+$palette-turquoise-500: nth($palette-turquoise, 6);
+$palette-turquoise-600: nth($palette-turquoise, 7);
+$palette-turquoise-700: nth($palette-turquoise, 8);
+$palette-turquoise-800: nth($palette-turquoise, 9);
+$palette-turquoise-900: nth($palette-turquoise, 10);
+$palette-turquoise-A100: nth($palette-turquoise, 11);
+$palette-turquoise-A200: nth($palette-turquoise, 12);
+$palette-turquoise-A400: nth($palette-turquoise, 13);
+$palette-turquoise-A700: nth($palette-turquoise, 14);
+
+  // Grey
+
+  .mdl-color-text--turquoise {
+    color: unquote("rgb(#{$palette-turquoise-500})") !important;
+  }
+
+  .mdl-color--turquoise {
+    background-color: unquote("rgb(#{$palette-turquoise-500})") !important;
+  }
+
+  .mdl-color-text--turquoise-50 {
+    color: unquote("rgb(#{$palette-turquoise-50})") !important;
+  }
+
+  .mdl-color--turquoise-50 {
+    background-color: unquote("rgb(#{$palette-turquoise-50})") !important;
+  }
+
+  .mdl-color-text--turquoise-100 {
+    color: unquote("rgb(#{$palette-turquoise-100})") !important;
+  }
+
+  .mdl-color--turquoise-100 {
+    background-color: unquote("rgb(#{$palette-turquoise-100})") !important;
+  }
+
+  .mdl-color-text--turquoise-200 {
+    color: unquote("rgb(#{$palette-turquoise-200})") !important;
+  }
+
+  .mdl-color--turquoise-200 {
+    background-color: unquote("rgb(#{$palette-turquoise-200})") !important;
+  }
+
+  .mdl-color-text--turquoise-300 {
+    color: unquote("rgb(#{$palette-turquoise-300})") !important;
+  }
+
+  .mdl-color--turquoise-300 {
+    background-color: unquote("rgb(#{$palette-turquoise-300})") !important;
+  }
+
+  .mdl-color-text--turquoise-400 {
+    color: unquote("rgb(#{$palette-turquoise-400})") !important;
+  }
+
+  .mdl-color--turquoise-400 {
+    background-color: unquote("rgb(#{$palette-turquoise-400})") !important;
+  }
+
+  .mdl-color-text--turquoise-500 {
+    color: unquote("rgb(#{$palette-turquoise-500})") !important;
+  }
+
+  .mdl-color--turquoise-500 {
+    background-color: unquote("rgb(#{$palette-turquoise-500})") !important;
+  }
+
+  .mdl-color-text--turquoise-600 {
+    color: unquote("rgb(#{$palette-turquoise-600})") !important;
+  }
+
+  .mdl-color--turquoise-600 {
+    background-color: unquote("rgb(#{$palette-turquoise-600})") !important;
+  }
+
+  .mdl-color-text--turquoise-700 {
+    color: unquote("rgb(#{$palette-turquoise-700})") !important;
+  }
+
+  .mdl-color--turquoise-700 {
+    background-color: unquote("rgb(#{$palette-turquoise-700})") !important;
+  }
+
+  .mdl-color-text--turquoise-800 {
+    color: unquote("rgb(#{$palette-turquoise-800})") !important;
+  }
+
+  .mdl-color--turquoise-800 {
+    background-color: unquote("rgb(#{$palette-turquoise-800})") !important;
+  }
+
+  .mdl-color-text--turquoise-900 {
+    color: unquote("rgb(#{$palette-turquoise-900})") !important;
+  }
+
+  .mdl-color--turquoise-900 {
+    background-color: unquote("rgb(#{$palette-turquoise-900})") !important;
+  }
+
+  .mdl-color--turquoise-A100 {
+    background-color: unquote("rgb(#{$palette-turquoise-A100})") !important;
+  }
+
+  .mdl-color--turquoise-A200 {
+    background-color: unquote("rgb(#{$palette-turquoise-A200})") !important;
+  }
+
+  .mdl-color--turquoise-A400 {
+    background-color: unquote("rgb(#{$palette-turquoise-A400})") !important;
+  }
+
+  .mdl-color--turquoise-A700 {
+    background-color: unquote("rgb(#{$palette-turquoise-A700})") !important;
+  }

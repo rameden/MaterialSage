@@ -29,7 +29,8 @@ function setup() {
   register_nav_menus([
     'drawer_navigation' => __('Drawer Navigation', 'immaterial'),
     'header_navigation' => __('Header Navigation', 'immaterial'),
-    'footer_links' => __('Footer Links', 'immaterial')
+    'footer_links_one' => __('Footer Links One', 'immaterial'),
+    'footer_links_two' => __('Footer Links Two', 'immaterial')
   ]);
 
   // Enable post thumbnails
@@ -96,7 +97,8 @@ function display_sidebar() {
     // @link https://codex.wordpress.org/Conditional_Tags
     is_404(),
     is_front_page(),
-    is_page_template('template-custom.php'),
+    is_page_template('template-full-width.php')
+    //is_page_template('archive-faq.php') //not working might not need.
   ]);
 
   return apply_filters('sage/display_sidebar', $display);
@@ -114,5 +116,6 @@ function assets() {
   }
 
   wp_enqueue_script('sage/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
+  wp_enqueue_script('expandable/js', Assets\asset_path('scripts/expandable-area-toggle.min.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);

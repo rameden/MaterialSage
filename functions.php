@@ -16,7 +16,8 @@ $sage_includes = [
   'lib/titles.php',    // Page titles
   'lib/wrapper.php',   // Theme wrapper class
   'lib/customizer.php', // Theme customizer
-  'lib/front-page-post-type.php' // Theme customizer
+  'lib/faq-post-type.php', // FAQ Post ty[e declaration and config
+  'lib/quote-rotator.php' // From Abandoned Plugin from WP repo
 ];
 
 foreach ($sage_includes as $file) {

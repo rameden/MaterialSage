@@ -1,4 +1,5 @@
 @import "common/custom-colors";
+@import "common/variables";
 
 .mdl-layout__header .mdl-layout__drawer-button {
     @extend .mdl-color-text--grey-50;
@@ -6,49 +7,183 @@
 
 body { scroll-behavior: smooth; }
 
-h1 {
-  @include typo-display-1();
+.questions {
+  list-style: outside none none;
+  padding: 0;
+}
+
+.data-listing {
+  //background: unquote("rgb(#{$palette-grey-100})");
+}
+
+img {
+  margin: 1rem;
+}
+
+.mdl-button--read-more {
+  float: right;
+  margin-top: 1rem;
+}
+
+.clear {
+    clear: both;
   }
 
-h2 {
-      @include typo-headline();
+.active, .closed {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: transparent none repeat scroll 0 0;
+    border-color: -moz-use-text-color -moz-use-text-color #999;
+    border-image: none;
+    border-style: none;
+    border-width: 0 0 1px;
+    color: unquote("rgb(#{$palette-mandarin-500})");
+    cursor: pointer;
+    font-size: 1.2rem;
+    list-style: outside none none;
+    padding: 0;
+    text-align: left;
+    width: 100%;
   }
 
-h3 {
-  @include typo-title();
-  }
+.response-definition {
 
+    background: #31312f;//#31312f; /* Iron Mountain Grey */
+    z-index: 1000;
+    margin-top: 10px;
+    //margin-left: -2.7em;
 
-@media (min-width: 37rem) {
-  h1 {
-    @include typo-display-2();
-  }
-
-  h2 {
-      @include typo-display-1();
-    }
-
-  h3 {
-    @include typo-headline();
+    p {
+      margin: .6em;
+      color: #f0eeeb;
     }
 }
 
-@media (min-width: 60rem) {
-  h1 {
-    @include typo-display-3();
+.response-definition p:last-of-type {
+    border-bottom: 1px solid rgba(36, 36, 35, 0.1);
+    padding-bottom: 0.5em;
   }
 
-  h2 {
-    @include typo-display-2();
-    }
-
-  h3 {
-    @include typo-display-1();
-    }
+.definitions {
+  position: relative;
+  max-width:83%;
 }
+
+@media (min-width: 480px) {
+  .response-definition {
+    //margin-left: -3.1rem;
+    margin-right: 3.2rem;
+  }
+}
+
+.widget_recent_entries ul li {
+  font-size: 1.2em;
+  line-height: 1.5;
+  list-style: outside none none;
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  display: inline-block;
+  //background: transparent url('../images/sprites/sprite-defs.svg#forward') no-repeat;
+}
+
+/* SRC - https://github.com/Nebularco/mdl-l */
+.list__item .btn:hover, .list__item .btn:hover:focus, .list__icon:hover, .list__icon:hover:focus
+{
+  transition: all 1s;
+  color: unquote("rgb(#{$palette-grey-500})");
+}
+
+// Generate code for flexbox responsive lists.
+//@include n-rows(20px, 400px, 10px, true, 3);
+/*.Bedsores {
+  order: 2
+  }
+.Falls {
+  order: 5
+  }
+.Dehydration--Malnutrition {
+  order: 2;
+  }*/
+
+/* TODO Consider making columns display vertically not horizontally
+@media (min-width: 480px) {
+  .items {
+    height: 300px;
+  }
+}
+@media (min-width: 840px) {
+  .items {
+    height: 200px;
+  }
+} */
+
+@include n-columns(200px, 10px, false, 3);
+
+#cta-button {
+  text-align: center;
+  background: $button-primary-color;
+  //background: -moz-linear-gradient(center top , #00DD88 0%, #00CC00 100%) repeat scroll 0 0 transparent;
+  border-radius: 1px;
+  border: 1px solid $color-primary-dark;
+  text-shadow: 0;
+  margin: 5px 0 10px 15px;
+  position: absolute;
+  right: -980px;
+  width: 200px;
+  display: none;
+  z-index: 100;
+}
+
+#cta-button:hover {
+    background: $button-hover-color;
+  }
 
 //Breakpoints 480, 600, 840, 960, 1280, 1440, and 1600dp.
+//rems 30, 37, 52, 60, 80, 90, 100
 
+@media (min-width: 460px) {
+  .mdl-small-cell--phone-only {
+    display: none;
+  }
+
+  //Match Left Margin to Site Title in Header
+  .mdl-cell--8-col, .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
+      margin-left: 3rem;
+      //width: calc(100% - 16px);
+  }
+
+  .alignleft {
+    margin-right: 1em;
+  }
+
+  .alignright {
+    margin-left: 1em;
+  }
+
+  .alignleft, .alignright {
+    width: auto;
+  }
+
+  .mdl-cell--8-col, .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
+    margin-left: 1rem;
+  }
+
+}
+
+@media (min-width: 980px) {
+  .mdl-cell--8-col, .mdl-cell--8-col-desktop.mdl-cell--8-col-desktop {
+      width: calc(66.6666666667% - 2rem);
+    }
+}
+
+@media (min-width: 1280px) {
+  .mdl-cell--8-col, .mdl-cell--8-col-desktop.mdl-cell--8-col-desktop {
+      width: calc(66.6666666667% - 4rem);
+    }
+}
 /* Rules for sizing the icon.
 .material-icons.md-18 { font-size: 18px; }
 .material-icons.md-24 { font-size: 24px; }

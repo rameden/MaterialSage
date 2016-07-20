@@ -1,15 +1,48 @@
 // Search form
+// Removed in place of php filter.
 .search-form {
   //@extend .mdl-textfield;
 }
-.search-form label {
+.wpcf7 label {
   font-weight: normal;
-  //@extend .mdl-textfield__label;
+  @extend .mdl-textfield__label;
 }
-.search-form .search-field {
+.wpcf7-form input {
   @extend .mdl-textfield__input;
 }
-.search-form .search-submit {
+.wpcf7-form .wpcf7-submit {
   @extend .mdl-button;
   //@extend .mdl-js-button .mdl-button--raised .mdl-js-ripple-effect;
+  //This won't work. See filter in lib/extras.php
 }
+
+.wpcf7-form {
+  max-width: 600px;
+  }
+
+.wpcf7-form textarea {
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+  resize: both;
+	width: 100%;
+  }
+
+
+#commentform {
+  position: relative;
+}
+
+.mdl-button, input[type="submit"], .search-form input.search-submit[type="submit"], input.mdl-button[type="submit"],
+input.wpcf7-submit[type="submit"] {
+    border: 1px solid #999;
+    width: auto;
+    }
+
+input.wpcf7-submit[type="submit"] {
+    float: right;
+    }
+
+.mdl-card__supporting-text .mdl-button {
+    float: right;
+  }

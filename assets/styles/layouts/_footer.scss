@@ -1,3 +1,25 @@
+
+
+.mdl-mega-footer--heading, .mdl-mega-footer__heading {
+  @extend .mdl-color-text--alabaster-600;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.mdl-mega-footer__drop-down-section {
+  img {
+    margin: .9rem 0 !important;
+    }
+  }
+
+.mdl-mini-footer__address {
+  margin-bottom: 2rem;
+}
+
+.mdl-mega-footer {
+  padding-bottom: 3rem;
+}
+
 .mdl-mega-footer {
   ul {
     @extend .mdl-mega-footer__link-list;
@@ -17,9 +39,9 @@
   display: none;
 }
 
-.mdl-mini-footer {
+.mdl-mega-footer {
   ul {
-    @extend .mdl-mini-footer__link-list;
+    @extend .mdl-mega-footer;
   }
 
   .textwidget {
@@ -27,27 +49,27 @@
   }
 
   span {
-    @extend .mdl-color-text--yellow-600;
+    @extend .mdl-color-text--alabaster-600;
   }
 
   a {
-    @extend .mdl-color-text--orange-100;
+    @extend .mdl-color-text--mandarin-100;
   }
 }
 
-.mdl-mini-footer__left-section {
+.mdl-mega-footer {
   svg {
-    fill: unquote("rgb(#{$palette-yellow-100})") !important;
+    fill: unquote("rgb(#{$palette-alabaster-100})") !important;
     }
 }
 
-.mdl-mini-footer__link-list {
+.mdl-mega-footer {
       flex-flow: row wrap;
       margin: 1.8rem 0;
-      @extend .mdl-color-text--yellow-100;
+      @extend .mdl-color-text--alabaster-100;
   }
 
-.mdl-mini-footer__address {
+.mdl-mega-footer__address {
   line-height: 1em;
   > span:first-child {
     line-height: 1.2rem;

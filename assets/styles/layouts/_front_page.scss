@@ -1,15 +1,498 @@
-.hero {
-    background: rgba(0, 0, 0, 0) url("../images/callmebobby.jpg") no-repeat scroll 34% 20% / cover ;
-    height: 632px;
+/* Styling for the various elements on the front page */
+
+/* 1. Hero
+ * 2. Biography
+ * 3. Situations
+ * 4. Articles
+ * 5. Media Queries
+ */
+
+
+
+/* 1. Hero  */
+#bio_image .hero .picture_text {
+    color: #fffaf5;
+    font-family: "Helvetica Neue", Helvetica, sans serif;
+    font-size: 20px;
+    letter-spacing: 6px;
+    line-height: 25px;
+    text-transform: uppercase;
+    position: absolute;
+    font-weight: 600;
+    left: -58px;
+    line-height: 42px;
+    right: 0;
+    top: 70px;
+    width: 180px;
 }
 
 .hero {
-  background: hsla(201, 61%, 50%, 1) url("../images/callmebobby.jpg") no-repeat scroll 34% 20% / cover ;
+  background: url("../images/callmejack.jpg") no-repeat scroll 34% 20% / cover ;
   height:632px;
-    margin: 0 auto;
-    position: relative;
-    transition: all 0.5s ease 0s;
+  margin: 0 auto;
+  position: relative;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+
+#biography, #articles {
+  background-color: hsla(190, 43%, 61%, 1); // Old browsers
+  //background-color: linear-gradient(to top,  hsla(181,31%,50%,1) 0%,hsla(181,45%,46%,1) 40%,hsla(181,57%,50%,1) 100%);
+  //@include linear-gradient-svg(female_bust, hsla(181,85%,46%,.6), hsla(181,85%,46%,.6), 1, no-repeat scroll 30% 100% / 30% auto, '100%', '100%', '0 0 100 125', '', to top, hsla(190, 43%, 61%, 1) 0%, hsla(181,45%,46%,1) 60%, hsla(181,57%,50%,1) 100%);
+}
+
+.mdl-color--turquoise-500 {
+  background-color: hsla(190, 43%, 61%, 1);
+  }
+
+.front-page__cover {
+  min-width:100%;
+  padding: 1rem 0 ;
+  min-height: 540px;
+  padding-bottom: 2em;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    width: 90%;
+    margin-left: 5%;
+    /*border-bottom: 1px solid rgba(36, 36, 35, 0.6);*/
+    padding-bottom: .7em;
+    line-height: 1.1em;
+  }
+
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    /*border-bottom: 1px solid rgba(36, 36, 35, 0.6);*/
+    padding-bottom: .7em;
     width: 100%;
+    margin-top: 0;
+    font-size: 1.1rem;
+    }
+
+  h1, h2, h3, h4, h5 {
+    font-family: $sans-serif-font;
+  }
+
+  blockquote {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.front-page__cover:nth-of-type(odd) {
+  background-color: hsla(190, 43%, 61%, 1);
 }
 
 
+.front-page__card-holder {
+  padding: 1rem;
+}
+
+
+ #bio_image {
+
+ .hero {
+      height: 632px;
+      margin: 0 auto;
+      position: relative;
+      transition: all 0.5s ease 0s;
+      width: 100%;
+      background-position: -95px center;
+    }
+
+  .textholder {
+      height: 100%;
+      margin-left: 24%;
+      max-width: 200px;
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
+}
+
+#biography > div {
+  margin: 1.8rem 1rem;
+}
+
+
+#biography {
+    text-align-last: justify;
+    -moz-text-align-last: justify;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    vertical-align: middle;
+
+    p {
+    font-size: 1.2rem;
+    margin: 1.2rem;
+    em {
+      color: hsla(30, 2%, 34%, 1);
+      font-style: normal;
+    }
+  }
+}
+
+#situations {
+  .list__item a {
+    color: unquote("rgb(#{$palette-turquoise-100})");
+  }
+  .list__item a:hover {
+    color: unquote("rgb(#{$palette-turquoise-400})");
+  }
+}
+
+#situations > h2 {
+  max-height: 1em;
+}
+
+/* MDL LIST SRC - https://github.com/Nebularco/mdl-list */
+
+.items .list__item {
+  margin: .4em auto;
+  list-style: none;
+}
+
+/* SRC - https://github.com/Nebularco/mdl-l */
+#situations {
+
+  .list__item .btn:hover, .list__item .btn:hover:focus
+  {
+    background: rgba(0, 0, 0, 0.15);
+    transition: all 1s;
+    color: white;
+  }
+
+  .response-definition p:first-of-type {
+    margin-top: 1em;
+  }
+
+  .response-definition {
+    left: 10%;
+    p {
+      padding: .7em .3em .3em;
+    }
+    p:first-child:first-letter {
+      float: left;
+      font-size: 3.2rem;
+      line-height: 40px;
+      padding-top: 4px;
+      padding-right: 2px;
+      padding-left: 3px;
+    }
+  }
+
+  .definitions {
+    // Vertically position resonse-definitions relative the the entire list.
+    position: relative;
+  }
+}
+
+
+/* ./MDL List - */
+#situations .active, #situations .closed {
+    cursor: pointer;
+    font-size: 1.4rem;
+    list-style: outside none none;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    background: transparent;
+    color: white;
+    border: 0;
+}
+
+#situations .active {
+  background-color:rgba(0, 0, 0, 0.1);
+  //color: #f0eeeb;
+  -webkit-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+  }
+
+#articles {
+  p {
+    text-align: justify;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    em, small {
+      color: unquote("rgb(#{$palette-grey-700})");
+      font-style: normal;
+      }
+  }
+
+  h2:first-of-type::first-letter  {
+    float: left;
+    font-size: 8.5rem;
+    line-height: 40px;
+    padding-left: 3px;
+    padding-right: 5px;
+    padding-top: 4px;
+    color: unquote("rgb(#{$palette-grey-700})");
+  }
+
+  h2:first-of-type {
+    // Using Lucida Grande font to style the numeral 3.
+    font-family: Lucida Grande, Georgia, Times, 'Times New Roman', serif;
+    line-height: 2.5rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    padding: .5em 0;
+    width: 0;
+  }
+
+}
+
+#articles p {
+  //font-size: 1.3em;
+  //margin-bottom: 2em;
+}
+
+/* 5. Media Queries */
+
+@media (min-width: 400px) {
+  #bio_image .hero {
+    background-position: -45px center;
+  }
+}
+
+@media (min-width: 600px) {
+
+  .items .list__item {
+    min-width: 340px;
+  }
+
+  .response-definition {
+    position: absolute;
+  }
+
+  .definitions {
+    max-width: 100%;
+  }
+
+    #bio_image .textholder {
+      max-width: 1000px;
+  }
+
+  #bio_image .hero {
+      background-position: -130px center;
+  }
+
+  #bio_image .hero .picture_text {
+    color: #fffaf5;
+    font-size: 3.4rem;
+    letter-spacing: 6px;
+    line-height: 4rem;
+    text-transform: uppercase;
+    top: 90px;
+    width: 290px;
+    position: absolute;
+    left: 420px;
+  }
+
+  #biography > div {
+  margin: 2rem 2rem;
+  }
+
+  #biography p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  #biography > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #biography {
+    position: relative;
+  }
+
+  #biography p {
+    margin: 0;
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  .front-page__cover {
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      max-height: 1em;
+      //margin-top: -1.5rem;
+    }
+
+    blockquote {
+      font-size: 1.2rem;
+      margin: 1rem auto;
+    }
+  }
+
+  #situations > h2 {
+    max-height: 1em;
+    margin-bottom: 0;
+  }
+
+  #articles h2 {
+      font-size: 2.4rem;
+      line-height: 2.2rem !important;
+      margin: 0 20% 2rem;
+      text-align: justify;
+      width: 60%;
+      max-width:400px;
+  }
+
+  #articles h3 {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 600px) {
+  #bio_image .textholder {
+    max-width: 1000px;
+  }
+
+  #bio_image .hero {
+    background-position: -110px center;
+  }
+
+  #biography p {
+    margin: 0 5%;
+    font-size: 1.7em;
+    line-height: 1em;
+  }
+
+  #biography > div {
+    width: 80%;
+    margin: 0 10%;
+  }
+}
+
+
+@media (min-width: 840px) {
+  #bio_image .textholder {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1500px;
+    position: relative;
+  }
+
+  #bio_image .hero {
+    background-position: 0 center;
+  }
+
+  #bio_image .hero .picture_text {
+    left: inherit;
+    right: 164px;
+    top: 150px;
+    width: 290px;
+    left: 600px;
+  }
+
+  #biography > div {
+    margin: 0 15%;
+    width: 70%;
+  }
+
+  .active, .closed {
+    width: 90%;
+  }
+
+  .response-definition {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 960px) {
+  #bio_image .hero .picture_text {
+    left: 700px;
+  }
+
+  #biography p {
+    font-size: 1.8em;
+    line-height: 1.2em;
+  }
+
+  .front-page__cover {
+    h2 {
+      font-size: 2.2em;
+    }
+
+    h3 {
+      font-size: 1.6em;
+      margin-top: -1rem;
+    }
+
+    blockquote {
+      font-size: 1.6rem;
+      margin: 0 auto 3rem;
+    }
+  }
+
+  #articles {
+    .front-page__card-holder > div {
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    h2 {
+      font-size: 2.7rem;
+      line-height: 3.2rem !important;
+      margin: 2rem auto;
+      max-width: 500px;
+      text-align: justify;
+      width: 60%;
+    }
+  }
+
+  #bio_image .hero {
+    background-position: 0 .1rem;
+  }
+
+}
+
+@media (min-width: 1280px) {
+  .front-page__cover h3 {
+    font-size: 1.6em;
+    margin-top: -4.5rem;
+  }
+
+}
+
+@media (min-width: 1440px) {
+  #bio_image .hero {
+    height:832px;
+  }
+
+  #situations > h2 {
+    margin: 3rem auto -3rem;
+  }
+
+  #situations > blockquote {
+    margin: 0 auto -3rem;
+  }
+
+  .front-page__cover h2 {
+    font-size: 2.7rem;
+  }
+
+  .definitions {
+    margin: 1rem auto;
+    max-width: 1400px;
+  }
+
+  blockquote.paragraph {
+    width: 100%;
+    text-align: center;
+  }
+}

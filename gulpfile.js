@@ -218,11 +218,11 @@ gulp.task('images', function() {
       var prefix = path.basename(file.relative, path.extname(file.relative));
       return {
       progressive: true,
-      interlaced: true,
+      interlaced: true/*,
       svgoPlugins: [{removeUnknownsAndDefaults: false}, {cleanupIDs: false},
         {addClassesToSVGElement: {
             className: prefix + ' svgfile',
-            }}]
+            }}]*/
           };
         }
     ))
@@ -275,7 +275,6 @@ gulp.task('build', function(callback) {
               'scripts',
               ['fonts', 'images'],
               'svgmin',
-              'svg2png',
               callback);
 });
 
@@ -311,13 +310,13 @@ gulp.task('iconify', function () {
   });
 
 // ### SVG to PNG
-var svg2png = require('gulp-svg2png');
+/*var svg2png = require('gulp-svg2png');
 
 gulp.task('svg2png', function () {
   gulp.src([path.source + 'images/*.svg'])
     .pipe(svg2png())
     .pipe(gulp.dest(path.dist + 'images'));
-});
+});*/
 
 // ### SVG MIN - variation of svgo for Gulp
 var svgmin = require('gulp-svgmin');

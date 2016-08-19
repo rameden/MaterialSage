@@ -105,7 +105,7 @@ function modifyMainHeader(visibility_class, opacity_class, hide) {
         if ( !supports ) return;
 
         if (mdl_drawer_button != null) {
-            mdl_drawer_button.innerHTML = '<svg viewBox="0 0 100 100" class="icon nav-icon"><use xlink:href="#nav-icon"></use></svg>';
+            mdl_drawer_button.innerHTML = '<svg viewBox="0 0 100 100" class="nav-icon"><use xlink:href="#nav-icon"></use></svg>';
           } else {
             setTimeout(mdl_drawer_btn, 100);
           }

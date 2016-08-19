@@ -74,13 +74,13 @@
   // Load Events
   $(document).ready(UTIL.loadEvents);
 
-  //https://css-tricks.com/using-svg/#comment-297467
+  /*https://css-tricks.com/using-svg/#comment-297467
   if (true) {
     $('img[src$=".svg"]').each(function() {
       var $this = $(this); // this = img
       $this.attr('src', $this.attr('src').replace(/svg$/, 'png'));
     });
-  }
+  }*/
 
   $('.mdl_drawer_button').click(function(){
    if($('.mdl-layout__drawer').hasClass('active')){

@@ -1,6 +1,57 @@
 @import "common/custom-colors";
 @import "common/variables";
 
+/**
+ * Hide icons by default to prevent blank spaces
+ * in unsupported browsers
+ */
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 0;
+	width: 0;
+}
+
+/**
+ * Display icons when browser supports SVG.
+ * Inherit height, width, and color.
+ */
+
+.svg .icon {
+	height: 1.4em;
+	width: auto;
+}
+
+/**
+ * Style fallback text in case browser doesn't support SVG
+ */
+.icon-fallback-text {
+	font-size: 12px;
+}
+
+/**
+ * Hide fallback text if browser supports SVG
+ */
+.svg .icon-fallback-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+
 .mdl-layout__header .mdl-layout__drawer-button {
     @extend .mdl-color-text--grey-50;
 }
@@ -120,8 +171,6 @@ img {
   }
 } */
 
-@include n-columns(200px, 10px, false, 3);
-
 #cta-button {
   text-align: center;
   background: $button-primary-color;
@@ -144,11 +193,13 @@ img {
 //Breakpoints 480, 600, 840, 960, 1280, 1440, and 1600dp.
 //rems 30, 37, 52, 60, 80, 90, 100
 
-@media (min-width: 460px) {
+@media (min-width: 365px) {
   .mdl-small-cell--phone-only {
     display: none;
   }
+}
 
+@media (min-width: 480px) {
   //Match Left Margin to Site Title in Header
   .mdl-cell--8-col, .mdl-cell--8-col-tablet.mdl-cell--8-col-tablet {
       margin-left: 3rem;

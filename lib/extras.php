@@ -129,6 +129,9 @@ function save_sequence_meta_box($post_id, $post, $update)
 add_action("save_post", __NAMESPACE__ . '\\save_sequence_meta_box', 10, 3);
 // EOF Sequence Field for FAQs
 
+/* Disable WPs filter that automatically adds paragraphs. */
+remove_filter ('the_content', 'wpautop');
+
 /*
 * Replace spaces in url string with separator supplied as argument
 */

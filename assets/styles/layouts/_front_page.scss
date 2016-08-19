@@ -7,32 +7,50 @@
  * 5. Media Queries
  */
 
+// This became necessary when I removed the mdl-grid class from the first content grid on the page
+// because it was making the div not display in Safari
 
-
-/* 1. Hero  */
-#bio_image .hero .picture_text {
-    color: #fffaf5;
-    font-family: "Helvetica Neue", Helvetica, sans serif;
-    font-size: 20px;
-    letter-spacing: 6px;
-    line-height: 25px;
-    text-transform: uppercase;
-    position: absolute;
-    font-weight: 600;
-    left: -58px;
-    line-height: 42px;
-    right: 0;
-    top: 70px;
-    width: 180px;
+.negative-grid {
+  margin: -1rem !important;
+  margin-left: 0 !important;
 }
 
-.hero {
-  background: url("../images/callmejack.jpg") no-repeat scroll 34% 20% / cover ;
-  height:632px;
-  margin: 0 auto;
-  position: relative;
-  transition: all 0.5s ease 0s;
-  width: 100%;
+/* 1. Hero  */
+ #bio_image {
+
+ .hero {
+      background: url("../images/callmejack.jpg") no-repeat scroll 34% 20% / cover ;
+      height: 632px;
+      margin: 0 auto;
+      position: relative;
+      transition: all 0.5s ease 0s;
+      width: 100%;
+      background-position: -95px center;
+      .picture_text {
+        color: #fffaf5;
+        font-family: "Helvetica Neue", Helvetica, sans serif;
+        font-size: 20px;
+        letter-spacing: 6px;
+        line-height: 25px;
+        text-transform: uppercase;
+        position: absolute;
+        font-weight: 600;
+        left: -58px;
+        line-height: 42px;
+        right: 0;
+        top: 70px;
+        width: 180px;
+      }
+    }
+
+  .textholder {
+      height: 100%;
+      margin-left: 24%;
+      max-width: 200px;
+      width: 100%;
+      position: relative;
+      margin: 0 auto;
+    }
 }
 
 #biography, #articles {
@@ -93,28 +111,6 @@
   padding: 1rem;
 }
 
-
- #bio_image {
-
- .hero {
-      height: 632px;
-      margin: 0 auto;
-      position: relative;
-      transition: all 0.5s ease 0s;
-      width: 100%;
-      background-position: -95px center;
-    }
-
-  .textholder {
-      height: 100%;
-      margin-left: 24%;
-      max-width: 200px;
-      width: 100%;
-      position: relative;
-      margin: 0 auto;
-    }
-}
-
 #biography > div {
   margin: 1.8rem 1rem;
 }
@@ -129,7 +125,7 @@
     vertical-align: middle;
 
     p {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     margin: 1.2rem;
     em {
       color: hsla(30, 2%, 34%, 1);
@@ -137,6 +133,11 @@
     }
   }
 }
+
+// 3. Situations
+
+
+@include n-columns(300px, 10px, false, 3);
 
 #situations {
   .list__item a {
@@ -180,7 +181,7 @@
     p:first-child:first-letter {
       float: left;
       font-size: 3.2rem;
-      line-height: 40px;
+      line-height: 37px;
       padding-top: 4px;
       padding-right: 2px;
       padding-left: 3px;
@@ -216,6 +217,7 @@
 
 #articles {
   p {
+    font-size: 16px;
     text-align: justify;
     font-family: Georgia, Times, 'Times New Roman', serif;
     em, small {
@@ -224,10 +226,17 @@
       }
   }
 
+  a {
+    color: unquote("rgb(#{$palette-grey-50})");
+  }
+  a:hover {
+    color: unquote("rgb(#{$palette-mandarin-800})");
+  }
+
   h2:first-of-type::first-letter  {
     float: left;
     font-size: 8.5rem;
-    line-height: 40px;
+    line-height: 80px;
     padding-left: 3px;
     padding-right: 5px;
     padding-top: 4px;
@@ -237,7 +246,13 @@
   h2:first-of-type {
     // Using Lucida Grande font to style the numeral 3.
     font-family: Lucida Grande, Georgia, Times, 'Times New Roman', serif;
-    line-height: 2.5rem;
+    //line-height: 5.5rem;
+  }
+
+  h2 {
+    // Using Lucida Grande font to style the numeral 3.
+    font-size: 2rem;
+    //line-height: 5.5rem;
   }
 
   h3 {
@@ -264,7 +279,7 @@
 @media (min-width: 600px) {
 
   .items .list__item {
-    min-width: 340px;
+    //min-width: 340px;
   }
 
   .response-definition {
@@ -288,10 +303,8 @@
     font-size: 3.4rem;
     letter-spacing: 6px;
     line-height: 4rem;
-    text-transform: uppercase;
     top: 90px;
     width: 290px;
-    position: absolute;
     left: 420px;
   }
 
@@ -442,7 +455,13 @@
   #articles {
     .front-page__card-holder > div {
       margin: 0 auto;
-      max-width: 900px;
+      max-width: 1100px;
+      h2, h3, p {
+        max-width: 900px;
+      }
+      p {
+        margin: 3rem auto;
+      }
     }
 
     h2 {
